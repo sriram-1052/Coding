@@ -1,0 +1,17 @@
+a=list(map(int,input().split()))
+a.sort()
+b=1
+for i in range(1,a[len(a)-1]+1):
+    f=0
+    c=0
+    for j in a:
+        if(i==j):
+            f=1
+            c+=1
+    if(f==1):
+        if(c>1): print(i,end=" ")
+    else: print(i,end=" ")
+
+Output:-
+14 15 8 9 2 1 7 3 2 4 5 6 11 12 13                                                                                                            
+2 10

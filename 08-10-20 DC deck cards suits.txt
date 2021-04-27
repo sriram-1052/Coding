@@ -1,0 +1,98 @@
+n=int(input())
+a=list(input().split())[:n]
+c,d,h,s=[],[],[],[]
+for i in a:
+    if(i[-1]=='C'): c.append(i[:len(i)-1])
+    elif(i[-1]=='D'): d.append(i[:len(i)-1])
+    elif(i[-1]=='H'): h.append(i[:len(i)-1])
+    else: s.append(i[:len(i)-1])
+c.sort()
+d.sort()
+h.sort()
+s.sort()
+if('10' in c):
+    c.remove('10')
+    for i in range(len(c)):
+        if(c[i].isalpha()): break
+    c.insert(i,'10')
+if('10' in d):
+    d.remove('10')
+    for i in range(len(d)):
+        if(d[i].isalpha()): break
+    d.insert(i,'10')
+if('10' in h):
+    h.remove('10')
+    for i in range(len(h)):
+        if(h[i].isalpha()): break
+    h.insert(i,'10')
+if('10' in s):
+    s.remove('10')
+    for i in range(len(s)):
+        if(s[i].isalpha()): break
+    s.insert(i,'10')
+if('A' in c):
+    c.remove("A")
+    c.insert(0,"A")
+if('A' in d):
+    d.remove("A")
+    d.insert(0,"A")
+if('A' in h):
+    h.remove("A")
+    h.insert(0,"A")
+if('A' in s):
+    s.remove("A")
+    s.insert(0,"A")
+if('Q' in c and 'K' in c):
+    c.remove("Q")
+    c.remove("K")
+    c.extend(("Q","K"))
+if('Q' in d and 'K' in d):
+    d.remove("Q")
+    d.remove("K")
+    d.extend(("Q","K"))
+if('Q' in h and 'K' in h):
+    h.remove("Q")
+    h.remove("K")
+    h.extend(("Q","K"))
+if('Q' in s and 'K' in s):
+    s.remove("Q")
+    s.remove("K")
+    s.extend(("Q","K"))
+print("C",end=" ")
+print("-",end=" ")
+if(len(c)==0): print("*")
+else: print(*c)
+print("D",end=" ")
+print("-",end=" ")
+if(len(d)==0): print("*")
+else: print(*d)
+print("H",end=" ")
+print("-",end=" ")
+if(len(h)==0): print("*")
+else: print(*h)
+print("S",end=" ")
+print("-",end=" ")
+if(len(s)==0): print("*")
+else: print(*s)
+Output:-
+10
+AD 2D 3D 4S 5C 6C JH QH KH AH
+C - 5 6
+D - A 2 3
+H - A J Q K
+S - 4
+
+7
+JS 5H 8C 2S 6H KC KH
+C - 8 K
+D - *
+H - 5 6 K
+S - 2 J
+
+52                                                                                                                                            
+2D 3D 4D 2C 4C 5C 5H 3H 5D 3C 2H 4H 4S 5S 2S 3S AS AH AD AC 6C 8C 7C 9C 7D 8D 6D 9D 9H 7H 6H 8H JC QC KC 7S 8S 9S 6S QD KD JD KH QH JH QS JS K
+S                                                                                                                                             
+C - A 2 3 4 5 6 7 8 9 J Q K                                                                                                                   
+D - A 2 3 4 5 6 7 8 9 J Q K                                                                                                                   
+H - A 2 3 4 5 6 7 8 9 J Q K                                                                                                                   
+S - A 2 3 4 5 6 7 8 9 J Q K

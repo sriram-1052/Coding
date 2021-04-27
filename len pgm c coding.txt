@@ -1,0 +1,51 @@
+/*
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+void main()
+{
+    char s[200];
+    int n;
+    printf("Enter the character:");
+    scanf("%s",&s);
+    n=strlen(s);
+    printf("%d",n);
+    getch();
+}
+*/
+
+
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+void main()
+{
+    char s[200],a[200];
+    int n,i;
+    printf("Enter the character:\n");
+    scanf("%s",&s);
+    n=strlen(s);
+    printf("\n%d\n",n);
+    if(3<=n<=1000)
+    {
+        for(i=0;i<n;i++)
+        {
+            if((s[i]!=s[i+1])||(s[i]!=s[i-1]))
+            {
+                a[i]=s[i];
+            }
+            else
+            {
+                continue;
+            }
+        }
+    printf("%s",b)
+    /*for(i=0;i<n;i++)
+    {
+        printf("%c"a[i]);
+    }*/
+    }
+    getch();
+}

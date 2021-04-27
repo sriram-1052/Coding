@@ -1,0 +1,28 @@
+r,c,k=map(int,input("Enter:").split())
+f=0
+a=0
+for i in range(r):
+    z=list(map(int,input().split()))
+    if((i==0)or(i==r-1)):
+        for j in z:
+            if(j!=k):
+                f=1
+                break
+    else:
+        for j in z:
+            if((a==0)or(a==c-1)):
+                if(j!=k):
+                    f=1
+                    break
+            a+=1
+if(f==0): print("YES");
+else: print("NO");
+
+
+
+Output:-
+Enter:3 4 10                                                                                                                                  
+10 10 10 10                                                                                                                                   
+10 56 89 10                                                                                                                                   
+10 11 10 10                                                                                                                                   
+NO 

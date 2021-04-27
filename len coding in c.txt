@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+void main()
+{
+    char s[200];
+    int n;
+    printf("Enter the character:");
+    scanf("%s",&s);
+    n=strlen(s);
+    printf("Length of character is:%d",n);
+    getch();
+}
+
+
+
+Output:
+Enter the character:sriram                                                                                                                    
+Length of character is:6 

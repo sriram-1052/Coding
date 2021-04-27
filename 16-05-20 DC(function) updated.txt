@@ -1,0 +1,41 @@
+#include <stdio.h>
+int multiplesToBeginning(int a[],int n)
+{
+    int i,b[n],j=0;
+    for(i=0;i<n;i++){
+        if(a[i]%10==0){
+            b[j]=a[i];
+            j++;
+        }
+    }
+    for(i=0;i<n;i++){
+        if(a[i]%10!=0){
+            b[j]=a[i];
+            j++;
+        }
+    }
+    for(i=0;i<n;i++){
+        a[i]=b[i];
+    }
+    return a;
+}
+int main()
+{
+    int a[100],n,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    multiplesToBeginning(a,n);
+    printf("Array: ");
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+
+
+Output:-
+5                                                                                                                                             
+10 87 41 50 30                                                                                                                                
+Array: 10 50 30 87 41

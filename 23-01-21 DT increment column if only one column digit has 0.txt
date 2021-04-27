@@ -1,0 +1,56 @@
+r,c=map(int,input().split())
+a=[]
+for i in range(r): a.append(list(map(int,input().split())))
+for j in range(c):
+    f=0
+    for i in range(r):
+        d=str(a[i][j])
+        if('0' in d): 
+            if(f==0):
+                x=i
+                f=1
+            else: 
+                f=0
+                break
+    if(f==1):
+        for i in range(r): 
+            if(x!=i): a[i][j]+=1
+for i in range(r): 
+    for j in range(c): print(a[i][j],end=" ")
+    print()
+
+Output:-
+3 4
+841 535 297 203
+978 881 700 815
+290 927 615 280
+
+842 535 298 203
+979 881 700 815
+290 927 616 280
+
+
+6 6
+793 455 615 940 715 913
+815 207 605 974 954 898
+979 351 722 335 43 763
+771 155 653 901 890 489
+366 876 316 104 88 281
+328 550 391 677 66 429
+
+793 455 616 940 716 913
+815 207 605 974 955 898
+979 351 723 335 44 763
+771 155 654 901 890 489
+366 876 317 104 89 281
+328 550 392 677 67 429
+
+
+Explanation:
+In the 1st column, the only integer 290 has the digit 0. 
+So all the integers in the 1st column are incremented by 1 except 290.In the 2nd column, there is no integer having the digit 0. 
+So the 2nd column remains the same.In the 3rd column, the only integer 700 has two 0s. 
+So all the integers in the 3rd column are incremented by 1 except 700.
+In the 4th column, there are two integers (203 and 280) having the digit 0. 
+So the 4th column remains the same.
+Hence the output is842 535 298 203979 881 700 815290 927 616 280

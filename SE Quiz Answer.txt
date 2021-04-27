@@ -1,0 +1,131 @@
+1.
+Special features V-Model:-
+* The advantage of the V-Model method is that it is very easy to understand and apply.
+* The simplicity of this model also makes it easier to manage.
+* The advantages of the V-Model method are as follows:−
+* This is a highly disciplined model and phases are completed one at a
+time.
+* Works well for smaller projects where requirements are very well
+understood.
+* Simple and easy to understand and use.
+* Easy to manage due to the rigidity of the model. Each phase has
+specific deliverables and a review process.
+
+2.
+Waterfall Model:-
+* Suitable for smaller project.
+* Easy to manage due to the rigidity of the model.
+* High amounts of risk and uncertainty.
+* Adjusting scope during the life cycle can end a project.
+
+Iterative Model:-
+* Suitable for larger and complex project.
+* Management complexity is more.
+* Risks are identified and resolved during iteration.
+* During the life cycle, software is produced early which facilitates customer
+evaluation and feedback.
+
+3.
+Spiral model :-
+* It is a combination of Iterative Model and Sequential Linear Model (Waterfall Model).
+* It allows incremental releases of the product or incremental refinement
+through each iteration around the spiral.
+* The spiral model has four phases.
+* A software project repeatedly passes through these phases in iterations
+called Spirals.
+
+Spiral Model Application :-
+* When there is a budget constraint and risk evaluation is important. For medium to high-risk projects.
+* Long-term project commitment because of potential changes to economic
+priorities as the requirements change with time.
+* New product line which should be released in phases to get enough
+customer feedback.
+* Significant changes are expected in the product during the development
+cycle.
+
+Spiral Model Advantages :-
+* Changing requirements can be accommodated.
+* Requirements can be captured more accurately.
+* Development can be divided into smaller parts and the risky parts can be
+developed earlier which helps in better risk management.
+
+Spiral Model Disadvantages :-
+* Management and process is more complex.
+* Not suitable for small or low risk projects and could be expensive for small
+projects.
+* Large number of intermediate stages requires excessive documentation.
+
+4.
+Special features V-Model:-
+* The advantage of the V-Model method is that it is very easy to understand and apply.
+* The simplicity of this model also makes it easier to manage.
+* The advantages of the V-Model method are as follows:−
+* This is a highly disciplined model and phases are completed one at a
+time.
+* Works well for smaller projects where requirements are very well
+understood.
+* Simple and easy to understand and use.
+* Easy to manage due to the rigidity of the model. Each phase has
+specific deliverables and a review process.
+
+5.
+Importance of Scrum Master:-
+* A skilled Scrum Master has in-depth understanding of the software delivery processes of his organization and knows how to implement the steps needed for bringing products to the market.
+* A Scrum Master is responsible for training agile teams in a way that helps them remain on a clear path to success.
+* With a strong understanding of all components and processes, an adept Scrum Master helps team members interpret agile concepts and methods in effective ways.
+* This role also incorporates proper transmission and management of information across all channels.
+
+Importance of Product Owner:-
+* Product ownership plays a critical role in being the voice of the client, whether working on your own product or partnering with Big Nerd Ranch to build a product.
+* The product owner understands the market, the competition and the users pain points.
+* When our clients play the role of product owner, they maximize on their investment by providing us the vision, information and road map so that we deliver a highly sustainable product at first pass.
+* By having an increased level of involvement from the very beginning, products get built faster, with more precision, and with greater return on investment.
+
+6.
+Incremental Model Disadvantages:-
+* It requires a good planning designing.
+* Problems might cause due to system architecture as such not all requirements collected up front for the entire software life cycle.
+* Each iteration phase is rigid and does not overlap each other.
+* Rectifying a problem in one unit requires correction in all the units and consumes a lot of time.
+
+7.
+Prototyping Model :-
+* Prototype is defined as first or preliminary form using which other forms
+are copied or derived.
+* Prototype model is a set of general objectives for software and software working model of limited functionality..
+* It does not identify the requirements like detailed input, output.
+* In this model, working programs are quickly produced.
+
+Prototyping Model Advantages :-
+* Prototype model need not know the detailed input, output, processes,
+adaptability of operating system and full machine interaction.
+* In the development process of this model users are actively involved.
+* The development process is the best platform to understand the system by
+the user.
+* Errors are detected much earlier.
+* Gives quick user feedback for better solutions.
+* It identifies the missing functionality easily. It also identifies the confusing
+or difficult functions.
+
+* Hence prototyping model is given more importance.
+
+8.
+* Extreme Programming is a software development methodology designed to improve the quality of software and its ability to properly adapt to the changing needs of the customer or client.
+* During the mid and late nineties, eXtreme Programming helps to manage the company’s payroll.
+
+9.
+Purpose of Unit Testing:-
+* Unit tests designed in the module design phase are executed on the code
+during this validation phase.
+* Unit testing is the testing at code level.
+* It helps eliminate bugs at an early stage, though all defects cannot be
+uncovered by unit testing.
+
+10.
+The following points describe where RAD can be used:-
+* RAD model can be applied successfully to the projects in which clear modularization is possible. If the project cannot be broken into modules, RAD may fail.
+* RAD should be used only when a system can be modularized to be delivered in an incremental manner.
+* It should be used if there is a high availability of designers for modeling.
+* It should be used only if the budget permits use of automated code generating tools.
+* RAD SDLC model should be chosen only if domain experts are available with relevant business knowledge.
+* Should be used where the requirements change during the project and working prototypes are to be presented to customer in small iterations of 2-3 months.

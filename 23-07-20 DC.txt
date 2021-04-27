@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,k,i,j;
+scanf("%d %d",&n,&k);
+for(i=k;i<=7;i++){
+    if((i>1)&&(i<7)){
+        n+=5;
+    }
+    else{
+        if(i==1) n*=2;
+        else{
+            n*=2;
+            for(j=1;j<k;j++){
+                if(j==1) n*=2;
+                else n+=5;
+            }
+        break;
+        }
+    }
+}
+printf("%d",n);
+}
+
+Output:-
+1 7
+29

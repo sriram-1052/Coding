@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c,i,j,k=0,f=0,g;
+scanf("%d %d",&r,&c);
+char a[r][c];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        scanf(" %c",&a[i][j]);
+    }
+}
+for(i=0;i<r;i++){
+    g=0;
+    while(g==0){
+        printf("%c",a[i][k]);
+        if(isalpha(a[i+1][k])) g=1;
+        else{
+            if(isdigit(a[i][k+1])){
+                if(k==c-1){
+                    f=1;
+                    g=1;
+                    break;
+                }
+                else k++;
+            }
+            else{
+                f=1;
+                g=1;
+                break;
+            }
+        }
+    }
+    if(f==1) break;
+}
+}
+
+Output:-
+5 5                                                                                                                                           
+p 6 q t =                                                                                                                                     
+] z 7 h *                                                                                                                                     
+t ) i e t                                                                                                                                     
+- - _ t *                                                                                                                                     
+t e t n s                                                                                                                                     
+p6z7i
+
+6 7
+q 9 8 w r T 7
+1 U 0 6 I z R
+p * W 7 g f x
+m Q ) i 3 d I
+j x 1 $ e 3 6
+k 2 ) e ! 2 y
+q9U0W7i3e36y

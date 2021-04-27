@@ -1,0 +1,28 @@
+n=int(input())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+x=[]
+for i in range(n):
+    c=[]
+    c.append(a[i])
+    c.append(b[i])
+    x.append(c)
+x.sort(key=lambda x:-x[0])
+x.sort(key=lambda x:-(x[0]*x[1]))
+print(x)
+
+Output:-
+5
+1 7 2 9 3
+7 5 5 8 1
+
+9 7 2 1 3
+8 5 5 7 1
+
+
+8
+5 3 8 2 3 4 3 6
+2 4 9 6 8 7 8 2
+
+8 4 3 3 6 3 2 5 
+9 7 8 8 2 4 6 2

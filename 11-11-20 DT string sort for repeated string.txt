@@ -1,0 +1,27 @@
+a=list(input().split())
+b=[]
+for i in range(len(a)-1):
+    for j in range(i+1,len(a)):
+        if(a[i]==a[j]):
+            f=0
+            for k in range(i):
+                if(a[i]==a[k]):
+                    f=1
+                    break
+            if(f==0):
+                b.append([a[i],len(a[i])])
+                break
+if(len(b)==0): print(-1)
+else:
+    b.sort(key=lambda x:-x[1])
+    for i in b: print(i[0],end=" ")
+
+Output:-
+when there is a will there is a way
+there is a
+
+Adversity and loss make a man wise
+-1
+
+If You are not part of the solution you are part of the problem
+part are the of

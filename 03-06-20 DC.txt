@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+int m,n,i,j,k,f=0;
+scanf("%d",&m);
+char a[101],b;
+for(i=0;i<m;i++){
+    scanf("%s",a);
+    n=strlen(a);
+    k=0;
+    for(j=0;j<n;j++){
+        b=tolower(a[j]);
+        if((b=='a')||(b=='e')||(b=='i')||(b=='o')||(b=='u')){
+            k=1;
+        }
+    }
+    if(k==1){
+        f++;
+    }
+}
+if(f==m){
+    printf("yes");
+}
+else{
+    printf("no");
+}
+}
+
+
+Output:-
+5
+Land
+Earth
+SKY
+Water
+FIRE
+no
+
+
+
+Python:-
+m=int(input())
+f=0
+for i in range(m):
+    a=input().strip()
+    k=0
+    for j in range(len(a)):
+        b=a[j].lower()
+        if((b=='a')or(b=='e')or(b=='i')or(b=='o')or(b=='u')):
+            k=1
+    if(k==1):
+        f+=1
+if(f==m):
+    print("yes")
+else:
+    print("no")
+
+
+Output:-
+4
+lion
+TIGER
+elEphant
+Deer
+yes

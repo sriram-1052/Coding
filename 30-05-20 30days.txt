@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int k,n,i,j;
+    char a[100001];
+    scanf("%d",&k);
+    for(j=0;j<k;j++){
+        scanf("%s",a);
+        n=strlen(a);
+        for(i=0;i<n;i++){
+            if(i%2==0){
+                printf("%c",a[i]);
+            }
+        }
+        printf(" ");
+        for(i=0;i<n;i++){
+            if(i%2!=0){
+                printf("%c",a[i]);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+Output:-
+2                                                                                                                                             
+Hacker                                                                                                                                        
+Hce akr                                                                                                                                       
+Rank                                                                                                                                          
+Rn ak

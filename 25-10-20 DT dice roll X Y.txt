@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,i,a,f=0,x=0,y=0;
+scanf("%d",&n);
+for(i=0;i<n;i++){
+    scanf("%d",&a);
+    if(f==0){
+        x+=a;
+        if(a!=6) f=1;
+    }
+    else{
+        y+=a;
+        if(a!=6) f=0;
+    }
+}
+printf("%d %d",x,y);
+}
+
+Output:-
+4
+1
+6
+3
+4
+5 9
+
+5
+1
+5
+4
+6
+4
+5 15

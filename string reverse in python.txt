@@ -1,0 +1,11 @@
+a=input("Enter:")
+n=len(a)
+b=a[::-1]
+flag=0
+for i in range(0,n):
+    if(a[i]!=b[i]):
+        flag=1
+if(flag==0):
+    print("yes")
+else:
+    print("no")

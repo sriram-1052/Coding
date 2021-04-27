@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i,a=1,s,j,k=1;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        s=0;
+        for(j=0;j<k;j++){
+            s+=a;
+            a++;
+        }
+        printf("%d ",s);
+        k++;
+    }
+    return 0;
+}
+
+
+Output::-
+10                                                                                                                                            
+1 5 15 34 65 111 175 260 369 505

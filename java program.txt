@@ -1,0 +1,34 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		Main ob=new Main();
+		ob.printFactorial(n);
+		ob.isPrime(n);
+	}
+	void printFactorial(int num){
+        int i,s=1;
+        for(i=2;i<=num;i++){
+            s*=i;
+        }
+        System.out.println(s);
+    }
+    void isPrime(int num){
+        int i,f=0;
+        for(i=2;i<num;i++){
+            if(num%i==0){
+                f=1;
+                break;
+            }
+        }
+        if(f==0) System.out.print(num+" is a Prime Number");
+        else System.out.print(num+" is not a Prime Number");
+    }
+}
+
+Output:-
+5                                                                                                                                             
+120                                                                                                                                           
+5 is a Prime Number

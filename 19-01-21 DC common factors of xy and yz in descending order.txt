@@ -1,0 +1,17 @@
+x,y,z=map(int,input().split())
+a,n=[1,1],min(x,y)
+for i in range(2,n+1):
+    if(x%i==0 and y%i==0): a.append(i)
+n=min(y,z)
+for i in range(2,n+1):
+    if(y%i==0 and z%i==0): a.append(i)
+a.sort()
+a=a[::-1]
+print(*a)
+
+Output:-
+24 100 80
+20 10 5 4 4 2 2 1 1
+
+121 11 55
+11 11 1 1

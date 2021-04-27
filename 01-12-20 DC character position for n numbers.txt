@@ -1,0 +1,47 @@
+m,n,k=map(int,input().split())
+a=[chr(i) for i in range(97,123)]
+for i in range(k):
+    if(i%2==0):
+        b=(m-1)%len(a)
+        print(a[b],end="")
+        a.pop(b)
+    else:
+        b=(n-1)%len(a)
+        print(a[b],end="")
+        a.pop(b)
+
+Output:
+5 8 10
+eifkgmhojq
+
+30 27 5
+dbhfl
+
+150 200 3                                                                                                                                             
+tzf 
+
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    char a[26]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    int x,y,m,n,k,i,j,l=26;
+    scanf("%d %d %d",&x,&y,&k);
+    for(i=0;i<k;i+=2){
+        m=x%l;
+        if(m>26) m%=l;
+        if(m==0) m=l;
+        printf("%c",a[m-1]);
+        for(j=m;j<l-1;j++) a[j-1]=a[j];
+        l--;
+        if(i+1<k){
+            n=y%l;
+            if(n>26) n%=l;
+            if(n==0) n=l;
+            printf("%c",a[n-1]);
+            for(j=n;j<l-1;j++) a[j-1]=a[j];
+            l--;
+        }
+    }
+}

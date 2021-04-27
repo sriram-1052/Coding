@@ -1,0 +1,76 @@
+#include <stdio.h>
+int main(){
+    int n,a[1000],i,j,tmp,d,e,b,c;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n-1;i++){
+        for(j=i+1;j<n;j++){
+            if(a[i]<a[j]){
+                tmp=a[i];
+                a[i]=a[j];
+                a[j]=tmp;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+    for(i=0;i<n-1;i++){
+        b=a[i];
+        while(b>0){
+            d=b%10;
+            b/=10;
+        }
+        for(j=i+1;j<n;j++){
+            c=a[j];
+            while(c>0){
+                e=c%10;
+                c/=10;
+            }
+            if(d<e){
+                tmp=a[i];
+                a[i]=a[j];
+                a[j]=tmp;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+    for(i=0;i<n-1;i++){
+        b=a[i];
+        while(b>0){
+            d=b%10;
+            b/=10;
+        }
+        for(j=i+1;j<n;j++){
+            c=a[j];
+            while(c>0){
+                e=c%10;
+                c/=10;
+            }
+            if(d==e){
+                if(a[j]>a[i]){
+                    tmp=a[i];
+                    a[i]=a[j];
+                    a[j]=tmp;
+                }
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+
+Output:-
+16                                                                                                                                            
+999 876 546 320 455 789 999 334 597 782 151 324 77 123 456 789                                                                                
+999 999 876 789 789 782 597 546 456 455 334 324 320 151 123 77                                                                                
+999 999 876 789 789 782 77 546 597 455 456 324 320 334 123 151                                                                                
+999 999 876 789 789 782 77 597 546 456 455 334 324 320 151 123

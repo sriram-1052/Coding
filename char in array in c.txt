@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int r=2,i;
+    char a[r];
+    for(i=0;i<r;i++)
+    {
+        scanf(" %c",&a[i]);
+    }
+    for(i=0;i<r;i++)
+    {
+        printf("%c ",a[i]);
+    }
+    return 0;
+}

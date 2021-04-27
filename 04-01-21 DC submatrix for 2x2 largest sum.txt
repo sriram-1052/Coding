@@ -1,0 +1,121 @@
+r,c=map(int,input().split())
+a=[list(map(int,input().split())) for i in range(r)]
+k=int(input())
+x,y=0,0
+for i in range(r-2,-1,-2):
+    for j in range(c-2,-1,-2):
+        b=[]
+        for l in range(i,i+2):
+            for m in range(j,j+2):
+                b.append(a[l][m])
+        if(sum(b)>=x and y<k):
+            d=b
+            x=sum(b)
+        c+=1
+print(*d[:2])
+print(*d[2:])
+
+Output:-
+4 6
+7 2 1 7 3 0
+8 9 6 4 0 3
+2 0 0 8 2 8
+8 6 9 5 9 9
+4
+
+2 8
+9 9
+
+
+4 4
+29 77 33 77
+39 71 75 34
+62 90 35 99
+69 85 84 88
+4
+
+62 90
+69 85
+
+
+Explanation:
+Here K = 4.
+The last 4 2x2 non-overlapping submatrices in the given 4x6 matrix are given below.
+3 0
+0 3
+
+2 0
+8 6
+
+0 8
+9 5
+
+2 8
+9 9
+The last 2x2 submatrix has the maximum sum 28 (2+8+9+9).
+Hence the output is
+2 8
+9 9
+
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c,k,i,j,l,m,x=r-2,y=c,z=0,p,q,s;
+scanf("%d %d",&r,&c);
+int a[r][c];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        scanf("%d",&a[i][j]);
+    }
+}
+scanf("%d",&k);
+while(k!=0){
+    if(y==0){
+        y=c;
+        x-=2;
+    }
+    c-=2;
+    k--;
+}
+for(i=x;i<r;i+=2){
+    for(j=y;j<c;j+=2){
+        s=0;
+        for(l=i;l<i+2;l++){
+            for(m=j;m<j+2;m++){
+                s+=a[l][m];
+            }
+        }
+        y=0;
+        if(s>z) p=i,q=j,z=s;
+    }
+}
+for(i=p;i<p+2;i++){
+    for(j=q;j<q+2;j++){
+        printf("%d ",a[p][q]);
+    }
+    printf("\n");
+}
+}
+
+
+r,c=map(int,input().split())
+a=[list(map(int,input().split())) for i in range(r)]
+k=int(input())
+x,y,d=0,0,[]
+for i in range(r-2,-1,-2):
+    for j in range(c-2,-1,-2):
+        b=[]
+        for l in range(i,i+2):
+            for m in range(j,j+2):
+                b.append(a[l][m])
+        if(sum(b)>=x and y<k):
+            d=b
+            x=sum(b)
+        c+=1
+for i in range(2):
+    for j in range(2):
+        print(d[i][j],end=" ")
+    print()

@@ -1,0 +1,102 @@
+1. 
+a=input().strip()
+p,x,q,y=0,0,len(a)-1,len(a)-1
+if(len(a)%2!=0):
+    for i in range(len(a)):
+        if(y==len(a)//2): print(" "*p+a[y])
+        elif(x<=len(a)//2): print(" "*p+a[x]+" "*q+a[y])
+        else: print(" "*p+a[y]+" "*q+a[x])
+        x,y=x+1,y-1
+        if(x<=len(a)//2): p,q=p+1,q-2
+        else: p,q=p-1,q+2
+else:
+    for i in range(len(a)):
+        if(x<len(a)//2): print(" "*p+a[x]+" "*q+a[y])
+        else: print(" "*p+a[y]+" "*q+a[x])
+        x,y=x+1,y-1
+        if(x<len(a)//2): p,q=p+1,q-2
+        elif(x>len(a)//2): p,q=p-1,q+2
+
+Output:-
+12345                                                                                                                                         
+1    5                                                                                                                                        
+ 2  4                                                                                                                                         
+  3                                                                                                                                           
+ 2  4                                                                                                                                         
+1    5
+
+sriram                                                                                                                                        
+s     m                                                                                                                                       
+ r   a                                                                                                                                        
+  i r                                                                                                                                         
+  i r                                                                                                                                         
+ r   a                                                                                                                                        
+s     m
+
+
+2.
+n=int(input())
+x,y=0,n-1
+for i in range(1,n+1):
+    if(i%2==0):
+        print(" "*y,end="")
+        y-=1
+    else:
+        print(" "*x,end="")
+        x+=1
+    print(i)
+
+Output:-
+6                                                                                                                                             
+1                                                                                                                                             
+     2                                                                                                                                        
+ 3                                                                                                                                            
+    4                                                                                                                                         
+  5                                                                                                                                           
+   6
+
+
+3.
+n=int(input())
+for i in range(n): print(n,end="")
+print()
+for i in range(n-2): print(n)
+for i in range(n): print(n,end="")
+print()
+for i in range(n-2):
+    print(" "*(n-1),end="")
+    print(n)
+for i in range(n): print(n,end="")
+
+Output:-
+5                                                                                                                                                
+55555                                                                                                                                            
+5                                                                                                                                                
+5                                                                                                                                                
+5                                                                                                                                                
+55555                                                                                                                                            
+    5                                                                                                                                            
+    5                                                                                                                                            
+    5                                                                                                                                            
+55555
+
+4                                                                                                                                                
+4444                                                                                                                                             
+4                                                                                                                                                
+4                                                                                                                                                
+4444                                                                                                                                             
+   4                                                                                                                                             
+   4                                                                                                                                             
+4444
+
+
+4.
+a=input().strip()
+b=""
+for i in a:
+    if(i not in b): b+=i
+print(b[::-1])
+
+Output:-
+google                                                                                                                                        
+elog

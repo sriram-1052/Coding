@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[1001];
+    scanf("%s",a);
+    int n=strlen(a),i,k;
+    k=n/2;
+    if(n%2==0){
+        for(i=0;i<n;i++){
+            if((i==k-1)||(i==k)){
+                printf("*");
+            }
+            else{
+                printf("%c",a[i]);
+            }
+        }
+    }
+    else{
+        for(i=0;i<n;i++){
+            if(i==k){
+                printf("*");
+            }
+            else{
+                printf("%c",a[i]);
+            }
+        }
+    }
+    return 0;
+}
+
+Output:-
+abc@defg                                                                                                                                      
+abc**efg

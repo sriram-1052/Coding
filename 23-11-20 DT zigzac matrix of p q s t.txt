@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+    int r,c,p,q,s,t,i,j,f=0;
+    scanf("%d %d",&r,&c);
+    char a[r][c];
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf(" %c",&a[i][j]);
+        }
+    }
+    scanf("%d %d\n %d %d",&p,&q,&s,&t);
+    for(i=p-1;i<s;i++){
+        if(i==p-1 && i==s-1){
+            for(j=q-1;j>=t-1;j--) printf("%c",a[i][j]);
+        }
+        else{
+            if(i==p-1){
+                for(j=q-1;j>=0;j--) printf("%c",a[i][j]);
+            }
+            else{
+                if(i==s-1){
+                    if(f==0){
+                        for(j=c-1;j>=t-1;j--) printf("%c",a[i][j]);
+                    }
+                    else{
+                        for(j=0;j<t;j++) printf("%c",a[i][j]);
+                    }
+                }
+                else{
+                    if(f==0){
+                        for(j=c-1;j>=0;j--) printf("%c",a[i][j]);
+                    }
+                    else{
+                        for(j=0;j<c;j++) printf("%c",a[i][j]);
+                    }
+                }
+            }
+        }
+        if(f==0) f=1;
+        else f=0;
+    }
+}
+Output:-
+8 5
+x 9 D l c
+0 k F m 6
+E q n 9 z
+w d B k w
+l n 1 B C
+q 7 r G m
+F p w 5 m
+s 6 l w 0
+3 4
+6 3
+9nqEwdBkwCB1nlq7r
+
+
+6 6
+q 2 p v x z
+B r t E f c
+6 0 9 v i d
+j A j E D D
+6 E c u E d
+g 7 n p y C
+2 2
+4 4
+
+rB609vidDDE

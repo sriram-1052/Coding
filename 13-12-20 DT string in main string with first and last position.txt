@@ -1,0 +1,48 @@
+a=input().strip()
+n=int(input())
+for i in range(n):
+    b=input().strip()
+    if(b in a):
+        for j in range(len(a)):
+            if(a[j]==b[0] and a[j:j+len(b)]==b):
+                x=j
+                break
+        print(x,(x+len(b))-1)
+    else: print(-1)
+
+Output:-
+theskillrackonlinecodingplatform
+4
+skill
+code
+in
+eskill
+
+3 7
+-1
+15 16
+2 7
+
+
+alliswellthatendswell
+5
+well
+at
+is
+that
+take
+
+5 8
+11 12
+3 4
+9 12
+-1
+
+
+Skillrack#123
+2
+skill
+rack#
+
+-1
+5 9

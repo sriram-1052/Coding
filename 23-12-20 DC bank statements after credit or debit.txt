@@ -1,0 +1,37 @@
+x,n=map(int,input().split())
+print("Opening Balance",end=":")
+print(x)
+for i in range(n):
+    a,b=map(int,input().split())
+    if(b<x): print("Debit",end=":")
+    else: print("Credit",end=":")
+    print(a,end=" ")
+    print("Balance",end=":")
+    print(b)
+    x=b
+
+Output:-
+5000 5 
+1000 4000 
+500 4500 
+400 4900 
+900 4000 
+2000 2000
+
+Opening Balance:5000 
+Debit:1000 Balance:4000 
+Credit:500 Balance:4500 
+Credit:400 Balance:4900 
+Debit:900 Balance:4000 
+Debit:2000 Balance:2000 
+
+
+1500 3
+500 2000
+300 2300
+300 2000
+
+Opening Balance:1500 
+Credit:500 Balance:2000 
+Credit:300 Balance:2300 
+Debit:300 Balance:2000

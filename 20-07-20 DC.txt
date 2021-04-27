@@ -1,0 +1,20 @@
+s=int(input())
+a=[]
+c=0
+while(s>0):
+    a.append(s%10)
+    s//=10
+while(a[0]%2!=0):
+    a.remove(a[0])
+b=a[::-1]
+for i in range(len(b)):
+    for j in range(i,len(b)):
+        if(b[j]==0):
+            continue
+        elif(b[j]%2==0):
+            c+=1
+print(c)
+
+Output:-
+5234
+6

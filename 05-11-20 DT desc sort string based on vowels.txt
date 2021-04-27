@@ -1,0 +1,25 @@
+a=list(input().split())
+d=[]
+for i in a:
+    c=0
+    l=0
+    for j in i:
+        b=j.lower()
+        if(b=='a' or b=='e' or b=='i' or b=='o' or b=='u'): c+=1
+    d.append(c)
+for i in range(len(d)):
+    l=0
+    for j in range(len(d)):
+        if(d[j]>l):
+            l=d[j]
+            x=j
+    print(a[x],end=" ")
+    d.pop(x)
+    a.pop(x)
+
+Output:-
+He separated the fighting children
+separated fighting children He the
+
+India will win the upcoming champions trophy
+India upcoming champions will win the trophy

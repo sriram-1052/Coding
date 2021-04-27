@@ -1,0 +1,24 @@
+n=int(input("Enter:"))
+a=list(map(int,input("Enter:").split()))
+o=[]
+e=[]
+for i in range(1,n+1):
+    if(i%2==0):
+        e.append(a[i-1])
+    else:
+        o.append(a[i-1])
+o.sort()
+e.sort()
+b=[]
+for i in o:
+    b.append(i)
+for i in e:
+    b.append(i)
+print(*b)
+
+
+
+Output:-
+Enter:6                                                                                                                                       
+Enter:19 56 81 15 16 82                                                                                                                       
+16 19 81 15 56 82

@@ -1,0 +1,49 @@
+n,k=map(int,input().split())
+a=list(input().split())[:n]
+b=[]
+for i in a:
+    c=[]
+    for j in i:
+        c.append(j.lower())
+    b.append(c)
+g=0
+for i in range(len(b)-1):
+    h=1
+    for j in range(i+1,len(b)):
+        if(b[i]==b[j]):
+            h+=1
+    if(h>g):
+        g=h
+if(g>=k):
+    print("yes")
+else:
+    print("no")
+
+
+Output:-
+Input:
+5 3
+apple orange orange orange Banana
+
+Output:
+yes
+
+Explanation:
+Here N = 5 and K = 3.
+In the given 5 string values, the string orange occurred 3 times consecutively. So yes is printed as the output.
+
+Example Input/Output 2:
+Input:
+4 4
+ROSE ROSE TULIP SUNFLOWER
+
+Output:
+no
+
+Example Input/Output 3:
+Input:
+5 3
+lion LION Lion lion Tiger
+
+Output:
+yes

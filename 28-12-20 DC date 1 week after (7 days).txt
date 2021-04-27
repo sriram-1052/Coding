@@ -1,0 +1,12 @@
+import datetime
+a=input().strip()
+b=datetime.datetime.strptime(a,'%d-%m-%Y')
+b+=datetime.timedelta(days=7)
+print(b.strftime('%d-%m-%Y'))
+
+Output:-
+11-08-2020
+18-08-2020
+
+31-03-2019
+07-04-2019

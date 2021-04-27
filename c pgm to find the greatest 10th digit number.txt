@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,a[51],i,l=0,x;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++){
+        if(a[i]/10%10>l){
+            l=a[i]/10%10;
+            x=a[i];
+        }
+    }
+    printf("%d",x);
+    return 0;
+}
+
+Output:-
+5                                                                                                                                             
+10 21 76 39 685                                                                                                                               
+685

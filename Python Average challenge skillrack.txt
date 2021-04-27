@@ -1,0 +1,187 @@
+1.
+a=int(input())
+b=a
+e=1
+for i in range(a):
+    c=a
+    d=e
+    for j in range(b):
+        print(d,end=" ")
+        d+=c
+        c-=1
+    b-=1
+    e+=1
+    print()
+
+Output:-
+5                                                                                                                                             
+1 6 10 13 15                                                                                                                                  
+2 7 11 14                                                                                                                                     
+3 8 12                                                                                                                                        
+4 9                                                                                                                                           
+5
+
+
+2.
+a=int(input())
+s=0
+n=a//2
+for i in range(1,n+1):
+    if(a%i==0):
+        s+=i
+print(s)
+
+Output:-
+20                                                                                                                                            
+22
+
+
+3.
+a=int(input())
+b=a
+e=0
+for i in range(1,a+1):
+    e+=i
+for i in range(a):
+    c=a
+    d=e
+    for j in range(b):
+        print(d,end=" ")
+        d-=c
+        c-=1
+    b-=1
+    e-=1
+    print()
+
+Output:-
+5                                                                                                                                             
+15 10 6 3 1                                                                                                                                   
+14 9 5 2                                                                                                                                      
+13 8 4                                                                                                                                        
+12 7                                                                                                                                          
+11
+
+
+4.
+s=input()
+f=0
+a=0
+b=0
+c=0
+for i in s:
+    if(i.isdigit()):
+        d=int(i)
+        if(f==0):
+            a=(a*10)+d
+        elif(f==1):
+            b=(b*10)+d
+        else:
+            c=(c*10)+d
+    else:
+        if(f==0):
+            f=1
+        else:
+            f=2
+if(a+b==c):
+    print("+")
+elif(a-b==c):
+    print("-")
+elif(a*b==c):
+    print("*")
+else:
+    print("/")
+
+Output:-
+5-4=20
+*
+
+
+5.
+n=int(input())
+a,b=map(int,input().split())
+x=0
+y=0
+i=0
+while(a>0):
+    e=a%10
+    d=e*pow(n,i)
+    i+=1
+    x+=d
+    a//=10
+i=0
+while(b>0):
+    e=b%10
+    d=e*pow(n,i)
+    i+=1
+    y+=d
+    b//=10
+print(x+y)
+
+Output:-
+3                                                                                                                                             
+11 201                                                                                                                                        
+23
+
+
+6.
+n=int(input())
+g=0.0
+d=0
+for i in range(n):
+    b,a=map(int,input().split())
+    c=0.0
+    c=a/b
+    if(c>g):
+        g=c
+        d=i+1
+print(d)
+
+Output:-
+3                                                                                                                                             
+10 300                                                                                                                                        
+20 550                                                                                                                                        
+15 460                                                                                                                                        
+3
+
+
+7.
+n=int(input())
+a=[]
+b=[]
+for i in range(n):
+    c,d=input().split()
+    a.append(c)
+    b.append(d)
+s=input()
+f=-1
+for i in range(len(a)):
+    if(a[i]==s):
+        f=i
+        break
+if(f==-1): print("-1")
+else: print(b[f])
+
+Output:-
+5                                                                                                                                             
+ab cd                                                                                                                                         
+ef gh                                                                                                                                         
+ij kl                                                                                                                                         
+mn op                                                                                                                                         
+qr st                                                                                                                                         
+ij
+kl
+
+
+8.
+a=input().strip()
+c=0
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if(a[i]==a[j]):
+            c+=1
+            break
+print(c)
+
+Output:-
+abccbaab                                                                                                                                      
+5

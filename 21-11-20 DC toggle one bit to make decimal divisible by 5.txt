@@ -1,0 +1,24 @@
+a=list(input().strip())
+f=0
+for i in range(len(a)):
+    b=[]
+    for j in a: b.append(j)
+    if(a[i]=='0'): b[i]='1'
+    else: b[i]='0'
+    x,z=0,0
+    for j in b[::-1]:
+        y=pow(2,x)
+        z+=int(j)*y
+        x+=1
+    if(z%5==0):
+        print("Yes")
+        f=1
+        break
+if(f==0): print("No")
+
+Output:-
+1101
+Yes
+
+1010
+No

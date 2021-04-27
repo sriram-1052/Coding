@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+   int row,col,count=0;
+   printf("Enter:");
+   scanf("%d %d",&row,&col);
+   char mat[row][col];
+   char x='*';
+   printf("Enter:");
+   for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            scanf(" %c",&mat[i][j]);
+        }
+    }
+   char star[500];
+   for(int i=0;i<col;i++){
+       for(int j=0;j<3;j++){
+           star[count]='*';
+           count++;
+       }
+       star[count]=' ';
+       count++;
+   }
+   star[count-1]=NULL;
+   
+   
+    for(int i=0;i<row;i++){
+        printf("%s",star);
+        printf("\n");
+      for(int j=0;j<col;j++){
+          printf("%c%c%c",x,mat[i][j],x);
+          if(j<col-1){
+              printf(" ");
+          }
+      }
+        printf("\b");
+        printf("\n");
+        printf("%s",star);
+        if(i<row-1)
+            printf("\n\n");
+  }
+
+    return 0;
+}

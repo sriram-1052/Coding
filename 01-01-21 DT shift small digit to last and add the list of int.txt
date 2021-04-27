@@ -1,0 +1,30 @@
+n=int(input())
+a=list(input().split())
+b=[]
+for i in range(n):
+    s=9
+    for j in range(len(a[i])):
+        if(int(a[i][j])<=s):
+            s=int(a[i][j])
+            x=j
+    y=""
+    for j in range(x): y+=a[i][j]
+    for j in range(x+1,len(a[i])): y+=a[i][j]
+    y+=a[i][x]
+    b.append(int(y))
+print(sum(b))
+
+Output:-
+4
+5729 123 7979 1099
+16010
+
+7
+35 117 808 168 950 5 1541
+4281
+
+Explanation:
+Here N = 4.
+After shifting the smallest digit in each integer to the right, the integers become 5792 231 7997 1990.
+The sum of the modified integers is 16010.
+So 16010 is printed as the output.

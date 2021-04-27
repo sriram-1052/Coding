@@ -1,0 +1,20 @@
+a=input().strip()
+b=input().strip()
+for i in range(len(a)):
+    if(a[i]!=b[i]):
+        x=i
+        break
+for i in range(len(a)-1,-1,-1):
+    if(a[i]!=b[i]):
+        y=i
+        break
+for i in range(x,y+1): print(b[i],end="")
+
+Output:-
+SkaRllick
+SkillRack
+illRa
+
+Encycloaidep
+Encyclopedia
+pedia

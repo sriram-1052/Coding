@@ -1,0 +1,37 @@
+n=int(input())
+a=[]
+for i in range(n):
+    r,s=map(str,input().split("@"))
+    a.append(s)
+b=list(set(a))
+b.sort()
+for i in b:
+    print(i)
+
+Output:-
+5                                                                                                                                             
+abc@gmail.com                                                                                                                                 
+def@outlook.com                                                                                                                               
+ghi@yahoo.com                                                                                                                                 
+jkl@gmail.com                                                                                                                                 
+mno@live.com                                                                                                                                  
+gmail.com
+live.com                                                                                                                                      
+outlook.com                                                                                                                                   
+yahoo.com
+
+
+
+n=int(input())
+a=[]
+for i in range(n):
+    r,s=map(str,input().split("@"))
+    a.append(s)
+b=list(set(a))
+b.sort()
+while(len(a)!=0):
+    d=max(a,key=a.count)
+    print(d)
+    for i in a:
+        if(i==d):
+            a.remove(d)

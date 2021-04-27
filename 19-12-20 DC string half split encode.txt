@@ -1,0 +1,25 @@
+a=input()
+x,y=[],[]
+for i in 'abcdefghijklm': x.append(i)
+n=len(x)
+for i in range(n): x.append(x[i].upper())
+for i in 'nopqrstuvwxyz': y.append(i)
+n=len(y)
+for i in range(n): y.append(y[i].upper())
+for i in a:
+    if(i==' '): print(" ",end="")
+    elif(i in x): print(y[x.index(i)],end="")
+    else: print(x[y.index(i)],end="")
+
+Output:-
+SkillRack
+FxvyyEnpx
+
+WELCOME TO THE PARTY
+JRYPBZR GB GUR CNEGL
+
+Explanation:
+The first half of the alphabets are a, b, c, d, e, f, g, h, i, j, k, l and m.
+The second half of the alphabets are n, o, p, q, r, s, t, u, v, w, x, y and z.
+After replacing the first half alphabet with the corresponding alphabet in the second half of the alphabets and vice versa, the string becomes FxvyyEnpx.
+Hence the output isFxvyyEnpx.

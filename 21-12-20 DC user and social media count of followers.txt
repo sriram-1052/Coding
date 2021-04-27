@@ -1,0 +1,51 @@
+n=int(input())
+a,d=[],[]
+for i in range(n):
+    b=input().strip()
+    d.append(b[0])
+    d.append(b[len(b)-1])
+    if(b[1]=='-'): b=b[::-1]
+    a.append(b)
+d=sorted(list(set(d)))
+for i in d:
+    print(i,end=" ")
+    s=0
+    for j in a:
+        if(j[0]==i): s+=1
+    print(s)
+
+Output:-
+5
+A->C
+C<-M
+V<-A
+C->M
+H->M
+
+A 0
+C 2
+H 0
+M 2
+V 1
+
+
+3
+A<-B
+C->A
+C<-B
+
+A 2
+B 0
+C 1
+
+
+Explanation:
+The user A has no followers. 
+So the count is 0.
+The user C has 2 followers M and A. 
+So the count is 2.
+The user H has no followers. 
+So the count is 0.
+The user M has 2 followers C and H. 
+So the count is 2.The user V has 1 follower A. 
+So the count is 1.

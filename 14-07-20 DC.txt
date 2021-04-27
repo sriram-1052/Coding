@@ -1,0 +1,26 @@
+n,x,y=map(int,input().split())
+c=[]
+s=0
+f=0
+while((len(c)<n)and(x<=y)):
+    if(f==1):
+        d=x//2
+        if(d not in c):
+            c.append(d)
+        x+=1
+        f=0
+    elif(x%2==0):
+        c.append(x)
+        f=1
+    else:
+        c.append(x)
+        x+=1
+if(len(c)<n): print("-1")
+else:
+    for i in c:
+        s+=i
+    print(s)
+
+Output:-
+5 10 15
+44

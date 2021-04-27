@@ -1,0 +1,30 @@
+r,s=map(int,input().split())
+a=r
+b=s
+x=[]
+y=[]
+while(a>0):
+    x.append(a%10)
+    a//=10
+while(b>0):
+    y.append(b%10)
+    b//=10
+c=max(y)
+z=[]
+for i in x:
+    if(i==max(x)): z.append(c)
+    else: z.append(i)
+z=z[::-1]
+y=y[::-1]
+m=0
+n=0
+for i in z: m=(m*10)+i
+for i in y: n=(n*10)+i
+print(m+n)
+
+
+Output:-
+111 112
+334
+
+z=[c if(i==min(x)) else i for i in x]

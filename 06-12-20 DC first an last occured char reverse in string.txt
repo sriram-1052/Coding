@@ -1,0 +1,20 @@
+a=input().strip()
+b=input().strip()
+for i in range(len(a)):
+    if(a[i]==b):
+        x=i
+        break
+for i in range(len(a)-1,-1,-1):
+    if(a[i]==b):
+        y=i
+        break
+for i in range(x): print(a[i],end="")
+for i in range(y,x-1,-1): print(a[i],end="")
+for i in range(y+1,len(a)): print(a[i],end="")
+
+Output:-
+skillrackk
+skcarllik
+
+GoogleClassRoom#ForLearningl
+GooglCelassRoom#ForLearning

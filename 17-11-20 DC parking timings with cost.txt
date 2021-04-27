@@ -1,0 +1,40 @@
+n=int(input())
+a=[]
+for i in range(n):
+    p,r=input().split()
+    p,q=p.split(":")
+    p,q,r=int(p),int(q),int(r)
+    a.append([p,q,r])
+x,y,z=map(int,input().split())
+b,c=0,0
+for i in range(len(a)):
+    d=a[i][0]
+    if(d>x or(d==x and a[i][1]>y)): b+=1
+    if(a[i][1]>30 or (d==0 and a[i][0]<=30)): d+=1
+    if(d*a[i][2]>z): c+=1
+print(b)
+print(c)
+
+Output:
+4
+02:45 10
+03:20 25
+02:55 15
+05:30 35
+3 15 50
+
+2
+2
+
+
+6
+00:30 15
+04:45 20
+01:00 10
+05:30 20
+02:31 12
+00:45 30
+0 59 30
+
+4
+3

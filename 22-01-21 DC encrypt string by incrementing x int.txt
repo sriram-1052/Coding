@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+char a[101];
+scanf("%s",a);
+int b[101],n=strlen(a),i,j,k;
+for(i=0;i<n;i++){
+    scanf("%d",&b[i]);
+}
+for(i=0;i<n;i++){
+    for(j=0;j<=i;j++){
+        for(k=0;k<b[i];k++){
+            if(a[j]=='Z' || a[j]=='z') a[j]-=26;
+            a[j]++;
+        }
+    }
+}
+for(i=0;i<n;i++){
+    printf("%c",a[i]);
+}
+}
+
+Output:-
+big
+2 1 6
+kpm
+
+SkillRack
+8 7 6 5 3 2 1 4 9
+LvmjeHopt
+
+Explanation:
+Here S = big.
+The length of S is 3 and the three integers are 2, 1 and 6.
+X = 2 -> After encrypting the first alphabet, the string becomes dig.
+X = 1 -> After encrypting the first 2 alphabets, the string becomes ejg.
+X = 6 -> After encrypting the first 3 alphabets, the string becomes kpm.
+So kpm is printed as the output.
+
+
+a=input().strip()
+b=list(map(int,input().split()))
+for i in range(len(b)):
+    for j in range(i+1):
+        for k in range(1,b[i]+1):
+            d=ord(a[j])+1
+            if(d==123 or d==91): d-=26
+            a[j]=chr(d)
+print(''.join(a))
+
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+char a[101];
+scanf("%s",a);
+int b[101],x[101],n=strlen(a),i,j,k;
+for(i=0;i<n;i++){
+    scanf("%d",&b[i]);
+}
+for(i=0;i<n;i++){
+    x[i]=(int)a[i];
+    if(isupper(a[i])) x[i]-=64;
+    else x[i]-=96;
+}
+for(i=0;i<n;i++){
+    for(j=0;j<=i;j++){
+        x[j]+=b[i];
+        if(x[j]>26) x[j]%=26;
+    }
+}
+for(i=0;i<n;i++){
+    if(isupper(a[i])) printf("%c",(char)x[i]+64);
+    else printf("%c",(char)x[i]+96);
+}
+}

@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+int main()
+{
+    int c,r,i,j,a[100][100],m=0,x;
+    printf("Enter:");
+    scanf("%d %d",&r,&c);
+    printf("Enter:\n");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(j=0;j<c;j++){
+        if(a[0][j]==1){
+            m++;
+        }
+    }
+    for(i=1;i<r;i++){
+        x=0;
+        for(j=0;j<c;j++){
+            if(a[i][j]==1){
+                x++;
+            }
+        }
+        if(x>m){
+            m=x;
+        }
+    }
+    printf("%d",m);
+    return 0;
+}
+
+
+
+Output:-
+Enter:4 5                                                                                                                                     
+Enter:                                                                                                                                        
+1 1 0 0 1                                                                                                                                     
+0 0 1 0 0                                                                                                                                     
+1 1 0 1 1                                                                                                                                     
+1 0 0 0 0                                                                                                                                     
+4
+
+
+
+Updated:-
+
+#include <stdio.h>
+int main()
+{
+    int c,r,i,j,a[100][100],m,x;
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++){
+        x=0;
+        for(j=0;j<c;j++){
+            scanf("%d",&a[i][j]);
+            if(a[i][j]==1){
+                x++;
+            }
+        }
+        if(i==0){
+            m=x;
+        }
+        else{
+            if(x>m){
+                m=x;
+            }
+        }
+    }
+    
+    printf("%d",m);
+    return 0;
+}
+
+
+
+Output:-
+4 5                                                                                                                                           
+1 1 0 0 1                                                                                                                                     
+0 0 1 0 0                                                                                                                                     
+1 1 0 1 1                                                                                                                                     
+1 0 0 0 0                                                                                                                                     
+4 

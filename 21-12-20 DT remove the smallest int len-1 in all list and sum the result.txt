@@ -1,0 +1,16 @@
+n=int(input())
+a=list(map(int,input().split()))
+x,s=len(str(min(a)))-1,0
+for i in a:
+    d=str(i)
+    s+=int(d[:len(d)-x])
+print(s)
+
+Output:-
+5
+9408 80 331 10455 900
+2116
+
+2
+1264 9987
+10

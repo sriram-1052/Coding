@@ -1,0 +1,97 @@
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+int n,i,j,x,y,z;
+scanf("%d",&n);
+y=n/2,z=n/2;
+if(n%2==0) y--;
+char a[n][n];
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        scanf(" %c",&a[i][j]);
+    }
+}
+scanf("%d",&x);
+for(i=1;i<x;i++){
+    y--;
+    z++;
+}
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        if(i>=y && i<=z && j>=y && j<=z) printf("* ");
+        else printf("%c ",a[i][j]);
+    }
+    printf("\n");
+}
+return 0;
+}
+
+Output:-
+8
+b z r p h u w f
+c p g b p u a j
+n h f a l b i g
+j k x n n y k p
+k v j f u b l r
+z x m a t z x j
+s o c u r q d j
+x n t v a g y h
+2
+b z r p h u w f
+c p g b p u a j
+n h * * * * i g
+j k * * * * k p
+k v * * * * l r
+z x * * * * x j
+s o c u r q d j
+x n t v a g y h
+
+5
+H Q G I B
+W A U T W
+F U O W C
+U G R E W
+R P K C M
+1
+H Q G I B
+W A U T W
+F U * W C
+U G R E W
+R P K C M
+
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,i,j,x;
+scanf("%d",&n);
+int p=n/2,q=n/2,r=n/2,s=n/2;
+char a[n][n];
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        scanf(" %c",&a[i][j]);
+    }
+}
+scanf("%d",&x);
+if(n%2==0){
+    p--;
+    r--;
+}
+for(i=1;i<x;i++){
+    p--;
+    q++;
+    r--;
+    s++;
+}
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        if(i>=p && i<=q && j>=r && j<=s) printf("* ");
+        else printf("%c ",a[i][j]);
+    }
+    printf("\n");
+}
+return 0;
+}

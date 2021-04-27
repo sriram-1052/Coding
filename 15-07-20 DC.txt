@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[101],b;
+    scanf("%s",a);
+    int n=strlen(a),i,j,c,d=0;
+    for(i=0;i<n;i++){
+        if(isdigit(a[i])){
+            c=a[i];
+            c-=48;
+            d=(d*10)+c;
+        }
+        else{
+            if(d%2==0){
+                for(j=0;j<d;j++){
+                    printf("%c",b);
+                }
+            }
+            else{
+                printf("%c%d",b,d);
+            }
+            b=a[i];
+            d=0;
+        }
+    }
+    if(d%2==0){
+        for(j=0;j<d;j++){
+            printf("%c",b);
+        }
+    }
+    else{
+        printf("%c%d",b,d);
+    }
+    return 0;
+}
+
+Output:-
+u5h4a10k7                                                                                                                                     
+u5hhhhaaaaaaaaaak7

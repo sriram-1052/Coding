@@ -1,0 +1,24 @@
+x=input().strip()
+y=input().split()
+if(len(x)!=len(y)): print("NO")
+else:
+    a,b,c=[],[],[]
+    for i in range(len(x)):
+        d=[x[i],y[i]]
+        if(x[i] not in a and y[i] not in b):
+            a.append(x[i])
+            b.append(y[i])
+            c.append(d)
+        elif(d not in c):
+            print("NO")
+            break
+    else: print("YES")
+
+Output:-
+abcacb
+book pen pencil book pencil pen
+YES
+
+PQRS
+bike car bus
+NO

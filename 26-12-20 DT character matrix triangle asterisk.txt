@@ -1,0 +1,68 @@
+def traverse(a,b,c,d):
+    while(a!=c or b!=d):
+        x[a][b]='*'
+        if(a!=c):
+            if(a>c): a-=1
+            else: a+=1
+        if(b!=d):
+            if(b>d): b-=1
+            else: b+=1
+r,c=map(int,input().split())
+x=[]
+for i in range(r): x.append(list(input().split()))
+p,q=map(int,input().split())
+s,t=map(int,input().split())
+u,v=map(int,input().split())
+p,q,s,t,u,v=p-1,q-1,s-1,t-1,u-1,v-1
+traverse(p,q,s,t)
+traverse(s,t,u,v)
+traverse(u,v,p,q)
+for i in x: print(*i)
+
+Output:-
+8 6
+w p H p x u
+a G i D x w
+C t B m x v
+m b g A n B
+w g o G t b
+n s r G f i
+t u w g y z
+z u G C z r
+4 6
+1 3
+7 3
+
+w p * p x u
+a G * * x w
+C t * m * v
+m b * A n *
+w g * G * b
+n s * * f i
+t u * g y z
+z u G C z r
+
+
+9 10
+a k B y j d x k q u
+b u C y s z A E B j
+x G g z f x x l t D
+E t h j D m A A z k
+j C E u t x j g j C
+E v j i t x s t r w
+r p o a m B g o w C
+i g h y G s G v t B
+f s h w z k b z o E
+7 6
+4 3
+4 6
+
+a k B y j d x k q u
+b u C y s z A E B j
+x G g z f x x l t D
+E t * * * * A A z k
+j C E * t * j g j C
+E v j i * * s t r w
+r p o a m * g o w C
+i g h y G s G v t B
+f s h w z k b z o E

@@ -1,0 +1,15 @@
+a=input().strip()
+b,f=0,0
+while(f==0):
+    d=pow(2,b)
+    c=bin(d)
+    if(c[2:] in a): print(d,end=" ")
+    b+=1
+    if(len(c)-2>=len(a)): f=1
+
+Output:-
+110111000100
+1 2 4 8
+
+00100000
+1 2 4 8 16 32

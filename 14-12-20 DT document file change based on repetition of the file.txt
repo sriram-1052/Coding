@@ -1,0 +1,49 @@
+n=int(input())
+a=[]
+for i in range(n):
+    c=input().strip()
+    a.append(c)
+for i in range(len(a)):
+    c=0
+    for j in range(i):
+        if(a[i]==a[j]): c+=1
+    if(c==0): print(a[i])
+    else:
+        x,y=a[i].split(".")
+        print(x,end="(")
+        print(c,end=").")
+        print(y)
+
+Output:-
+7
+mybio.txt
+profile.jpeg
+mybio.txt
+mybio.txt
+profile.pdf
+profile.jpeg
+mybio.odt
+
+mybio.txt
+profile.jpeg
+mybio(1).txt
+mybio(2).txt
+profile.pdf
+profile(1).jpeg
+mybio.odt
+
+
+6
+book.png
+book.txt
+mydoc.docx
+book.txt
+mydoc.pdf
+book.txt
+
+book.png
+book.txt
+mydoc.docx
+book(1).txt
+mydoc.pdf
+book(2).txt

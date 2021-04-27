@@ -1,0 +1,200 @@
+1.
+a=input().strip()
+s=0
+u=0
+l=0
+n=0
+if(len(a)>=8 and len(a)<=25):
+    for i in a:
+        if(i.isalpha()):
+            if(i.isupper()): u+=1
+            else: l+=1
+        elif(i.isdigit()): n+=1
+        else: s+=1
+    if(u>=1 and l>=1 and n>=2 and s>=1): print("VALID")
+    else: print("INVALID")
+else: print("INVALID")
+
+Output:-
+Input:
+kiC_3b0x3r
+VALID
+
+2.
+t=int(input())
+x=99999.0
+for i in range(t):
+    a,b,c=input().split()
+    b=int(b)
+    c=int(c)
+    d=(b*c)/100.0
+    if(d<x):
+        x=d
+        y=a
+print(y)
+
+Output:-
+3
+harddisk 4000 20
+monitor 15000 10
+laptop 30000 5
+
+harddisk
+
+3.
+m,n=map(int,input().split())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+c=0
+for i in range(m):
+    f=0
+    for j in range(n):
+        if(a[i]==b[j]):
+            f=1
+            break
+    if(f==0): c+=1
+for i in range(n):
+    f=0
+    for j in range(m):
+        if(b[i]==a[j]):
+            f=1
+            break
+    if(f==0): c+=1
+print(c)
+
+Output:-
+4 5
+1 5 9 10
+22 5 12 9 5
+4
+
+4.
+n,m=map(int,input().split())
+x,y=map(int,input().split(":"))
+c=0
+d=list(input().split())
+for j in d:
+    f=0
+    a=0
+    b=0
+    for k in j:
+        if(k==':'): f=1
+        elif(f==0):
+            z=int(k)
+            a=(a*10)+z
+        else:
+            z=int(k)
+            b=(b*10)+z
+    if(a<=x):
+        if(a<x): c+=1
+        elif(a==x and b<=y): c+=1
+if(c>=m): print("No")
+else: print("Yes")
+
+Output:-
+5 3
+09:30
+09:30 09:31 09:35 10:40 09:28
+
+Yes
+
+
+5.
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,a[100],b[100],c[100],i,j,t,f,x=0,y=0,z=0;
+while(scanf("%d",&n)==1){
+    f=0;
+    for(i=2;i<n/2;i++){
+        if(n%i==0){
+            f=1;
+            break;
+        }
+    }
+    if(f==0){
+        a[x]=n;
+        x++;
+    }
+    else{
+        if(n%2==0){
+            c[z]=n;
+            z++;
+        }
+        else{
+            b[y]=n;
+            y++;
+        }
+    }
+}
+for(i=0;i<x-1;i++){
+    for(j=i+1;j<x;j++){
+        if(a[i]>a[j]){
+            t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+        }
+    }
+}
+for(i=0;i<y-1;i++){
+    for(j=i+1;j<y;j++){
+        if(b[i]>b[j]){
+            t=b[i];
+            b[i]=b[j];
+            b[j]=t;
+        }
+    }
+}
+for(i=0;i<z-1;i++){
+    for(j=i+1;j<z;j++){
+        if(c[i]>c[j]){
+            t=c[i];
+            c[i]=c[j];
+            c[j]=t;
+        }
+    }
+}
+for(i=0;i<x;i++){
+    printf("%d ",a[i]);
+}
+for(i=0;i<y;i++){
+    printf("%d ",b[i]);
+}
+for(i=0;i<z;i++){
+    printf("%d ",c[i]);
+}
+}
+
+Output:-
+4 5 9 22 11 2 15
+2 5 11 9 15 4 22
+
+
+6.
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+long a,b,h,l,i,j;
+scanf("%ld %ld",&a,&b);
+for(i=1;(i<=a && i<=b);i++){
+    if(a%i==0 && b%i==0){
+        h=i;
+    }
+}
+for(i=a;i<a+999999999;i++){
+    if(i%a==0 && i%b==0){
+        l=i;
+        break;
+    }
+}
+printf("%ld",l-h);
+}
+
+Output:-
+30
+45
+75

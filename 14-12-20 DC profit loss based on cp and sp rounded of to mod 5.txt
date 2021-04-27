@@ -1,0 +1,28 @@
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    d=i%10
+    i//=10
+    if(d==0 or d==5): i=(i*10)+d
+    elif(d>0 and d<3): i=i*10 
+    elif((d>2 and d<5) or (d>5 and d<8)): i=(i*10)+5
+    else: i=(i+1)*10
+    b.append(i)
+x,y=sum(a),sum(b)
+if(x==y): print("No Profit No Loss")
+elif(x>y): print("Loss",x-y)
+else: print("Profit",y-x)
+
+Output:-
+6
+84 77 72 58 23 25
+Profit 1
+
+3
+152 96 100
+Loss 3
+
+5
+15 20 5 16 19
+No Profit No Loss

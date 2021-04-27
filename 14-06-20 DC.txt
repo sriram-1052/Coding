@@ -1,0 +1,17 @@
+x,y,k=map(int,input().split())
+f=0
+for i in range(x+1,y):
+    a=i
+    c=0
+    while(a>0):
+        if(a%10!=0):
+            c+=1
+        a//=10
+    if(c==k):
+        f=1
+        print(i,end=" ")
+if(f==0): print("-1")
+
+Output:-
+500 600 2                                                                                                                                     
+501 502 503 504 505 506 507 508 509 510 520 530 540 550 560 570 580 590

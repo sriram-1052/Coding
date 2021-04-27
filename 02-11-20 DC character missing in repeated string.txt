@@ -1,0 +1,35 @@
+a=input().strip()
+b=input().strip()
+k=0
+for i in b:
+    if(i!=a[k]):
+        print(a[k])
+        break
+    if(k<len(a)-1): k+=1
+    else: k=0
+
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+char a[101],b[1001];
+scanf("%s\n %s",a,b);
+int m=strlen(a),n=strlen(b),i,j;
+for(i=0,j=0;i<n;i++,j++){
+    if(b[i]!=a[j]){
+        printf("%c",a[j]);
+        break;
+    }
+    if(j==m-1) j=-1;
+}
+}
+
+Output:-
+ant
+antantantanantant
+t
+
+Skill
+SkillSkillSkillkillSkill
+S

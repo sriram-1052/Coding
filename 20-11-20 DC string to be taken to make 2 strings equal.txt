@@ -1,0 +1,42 @@
+a=input().strip().lower()
+b=input().strip().lower()
+i=len(a)-1
+j=len(b)-1
+f=0
+while(i>=0 and j>=0):
+    if(a[i]==b[j]): f=1
+    else: break
+    i-=1
+    j-=1
+if(f==0): print(-1)
+else: print((i+1)+(j+1))
+
+Output:-
+Cream
+JAM
+4
+
+corn
+Corn
+0
+
+123@abc
+123@XYZ
+-1
+
+
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+char a[1001],b[1001];
+scanf("%s\n %s",a,b);
+int m=strlen(a),n=strlen(b),i,j,f=0;
+for(i=m-1,j=n-1;i>=0 && j>=0;i--,j--){
+    if(tolower(a[i])==tolower(b[j])) f=1;
+    else break;
+}
+if(f==0) printf("-1");
+else printf("%d",(i+j)+2);
+}

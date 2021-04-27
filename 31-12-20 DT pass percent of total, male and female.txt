@@ -1,0 +1,41 @@
+n=int(input())
+c,m,f,a,b=0,0,0,0,0
+for i in range(n):
+    x,y,z=input().split()
+    y,z=int(y),int(z)
+    if(x=='M'): a+=1
+    else: b+=1
+    if(y>37 and z>12):
+        c+=1
+        if(x=='M'): m+=1
+        else: f+=1
+p,q,r=(a*1.0),(b*1.0),(n*1.0)
+print("%.2f" %(c*100)/r)
+print("%.2f" %(m*100)/p)
+print("%.2f" %(f*100)/q)
+
+Output:-
+10
+M 50 25
+M 32 15
+F 65 24
+M 75 25
+F 40 10
+F 45 17
+M 25 10
+M 37 12
+M 60 21
+F 72 25
+60.00
+50.00
+75.00
+
+5
+M 51 12
+F 46 22
+M 29 18
+M 38 13
+M 41 19
+60.00
+50.00
+100.00

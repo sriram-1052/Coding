@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[1000][1000],r,c,i,j,k,f=0;
+    printf("Enter:");
+    scanf("%d %d %d",&r,&c,&k);
+    printf("Enter:\n");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            if((i==0)||(i==r-1)){
+                if(a[i][j]!=k){
+                    f=1;
+                    break;
+                }
+            }
+            else{
+                if((j==0)||(j==c-1)){
+                    if(a[i][j]!=k){
+                        f=1;
+                        break;
+                    }
+                }
+            }
+        }
+        if(f==1){
+            break;
+        }
+    }
+    if(f==0) printf("Yes");
+    else printf("No");
+    return 0;
+}
+
+
+
+Output:-
+Enter:3 4 12                                                                                                                                  
+Enter:                                                                                                                                        
+12 12 12 12                                                                                                                                   
+12 88 92 12                                                                                                                                   
+12 12 12 12                                                                                                                                   
+Yes

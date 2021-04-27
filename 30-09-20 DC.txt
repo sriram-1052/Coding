@@ -1,0 +1,22 @@
+a=input().strip()
+b=int(input())
+d=[]
+s=0
+b-=1
+for i in range(len(a)-1,-1,-1):
+    d.append(a[i])
+for i in range(len(a)):
+    n=len(d)
+    s+=b
+    while(s>=n): s-=n
+    print(d[s],end="")
+    d.pop(s)
+
+Output:-
+apple
+4
+ppale
+
+Xyz#12345                                                                                                                                     
+5                                                                                                                                             
+15z23#X4y

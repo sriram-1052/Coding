@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int a[500],n,i,flag=0;
+    printf("Enter the total no.of elements:");
+    scanf("%d",&n);
+    printf("Enter the elements:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("The required answer is: ");
+    if(1<=n<=100)
+    {
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==i)
+        {
+            flag++;
+            printf("%d ",a[i]);
+        }
+    }
+    if(flag==0)
+    {
+        printf("-1");
+    }
+    }
+getch();
+}
+
+
+Output:-
+Enter the total no.of elements:6                                                                                                              
+Enter the elements:5 4 2 3 6 5                                                                                                                
+The required answer is: 2 3 5 

@@ -1,0 +1,25 @@
+n=int(input())
+a=[]
+b=[]
+for i in range(n):
+    x,y=input().split(".")
+    a.append(x)
+    b.append(y)
+c=list(set(b))
+for i in range(len(c)):
+    d=b.count(c[i])
+    print(d,end=" .")
+    print(c[i])
+
+Output:-
+6
+Hello.java
+srack.c
+tcinput.txt
+tcoutput.txt
+tcgenerator.py
+Student.java
+2 .java
+1 .c
+2 .txt
+1 .py

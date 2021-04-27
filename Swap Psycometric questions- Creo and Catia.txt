@@ -1,0 +1,29 @@
+1. Which of these is not the modes in creo parametric?
+a. Sketch mode
+b.// Start mode
+c. Drawing mode
+d. Manufacturing mode
+
+2.The process of adding material is defined by?
+a.// Sketched section
+b. Assembly section
+c. Part section
+d. Geometric section
+
+3.Which of these is used for 3D or hollow object creation?
+a. Sweep
+b. Blend
+c. Extrude
+d.// Revolve
+
+4.Catia stands for:
+a. Computered Architectural Three dimensional Interface Application. 
+b.// Computer Aided Three dimensional Interactive Application.
+c. Computer Arrangeable Three dimensional Interface Application.
+d. Computered Aid Three discrete Interactive Application. 
+
+5.Which is the tool used to exit from sketcher worbench to part design workbench.
+a. Round Sketcher
+b. Enter Sketcher
+c.// Exit Sketcher
+d. Loop Sketcher

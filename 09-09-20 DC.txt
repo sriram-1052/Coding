@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main()
+{
+    long n,a[101],b[11],i,j,k,l,d,s=0,x,y,t;
+    scanf("%ld",&n);
+    for(i=0;i<n;i++){
+        scanf("%ld",&a[i]);
+    }
+    for(l=0;l<n;l++){
+        d=a[l];
+        x=d%10;
+        d/=10;
+        k=0;
+        y=0;
+        while(d>0){
+            b[k]=d%10;
+            k++;
+            d/=10;
+        }
+        for(i=0;i<k-1;i++){
+            for(j=i+1;j<k;j++){
+                if(b[i]<b[j]){
+                    t=b[i];
+                    b[i]=b[j];
+                    b[j]=t;
+                }
+            }
+        }
+        if(a[l]%2==0){
+            for(i=0;i<k;i++){
+                y=(y*10)+b[i];
+            }
+        }
+        else{
+            for(i=k-1;i>=0;i--){
+                y=(y*10)+b[i];
+            }
+        }
+        y=(y*10)+x;
+        s+=y;
+    }
+    printf("%ld",s);
+    return 0;
+}
+
+Output:-
+7                                                                                                                                             
+321 84 55 67 901 826 230                                                                                                                      
+1674

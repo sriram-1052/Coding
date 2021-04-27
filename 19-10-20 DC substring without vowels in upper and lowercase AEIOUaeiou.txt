@@ -1,0 +1,16 @@
+s=input().strip()
+c=0
+for i in range(len(s)-1):
+    for j in range(i+1,len(s)):
+        f=0
+        for k in range(i,j+1):
+            if(s[k] in "AEIOUaeiou"):
+                f=1
+                break
+        if(f==0): c+=1
+print(c)
+
+Output:-
+people
+3
+[pe,pl,ppl]

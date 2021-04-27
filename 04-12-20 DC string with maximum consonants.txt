@@ -1,0 +1,36 @@
+a=list(input().split())
+x=0
+for i in a:
+    c=0
+    for j in i:
+        if(j.isalpha()):
+            y=j.lower()
+            if(y!='a' and y!='e' and y!='i' and y!='o' and y!='u'): c+=1
+    if(c>=x):
+        x=c
+        z=i
+for i in a:
+    print(i,end=" ")
+    if(i==z): break
+
+Output:-
+Hi bob@123, your transaction is successful. Thank You.
+Hi bob@123, your transaction is successful.
+
+FGHJKfghjkl ab#1990 aeiou aaaaabcdfgheeeeee lol
+FGHJKfghjkl
+
+
+Explanation:
+The number of consonants in the word Hi is 1.
+The number of consonants in the word bob@123, is 2.
+The number of consonants in the word your is 2.
+The number of consonants in the word transaction is 7.
+The number of consonants in the word is is 1.
+The number of consonants in the word successful. is 7.
+The number of consonants in the word Thank is 4.
+The number of consonants in the word You. is 1.
+Here the maximum number of consonants is 7.
+The words "transaction" and "successful." have the same maximum number of consonants, so the words till the last occurring word "successful." are printed as the output.
+Hence the output is
+Hi bob@123, your transaction is successful.

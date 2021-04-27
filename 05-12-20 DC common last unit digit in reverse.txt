@@ -1,0 +1,14 @@
+n=int(input())
+a=list(map(int,input().split()))
+x=a[len(a)-1]%10 //[or x=a[-1]%10]
+for i in a[::-1]:
+    if(i%10==x): print(i,end=" ")
+
+Output:-
+5
+108 6608 517 56 48
+48 6608 108
+
+4
+154 8 569 50
+50

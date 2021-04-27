@@ -1,0 +1,28 @@
+n,k=map(int,input().split())
+a,c,f=bin(n),0,0
+for i in range(len(a)):
+    if(a[i]=='1'):
+        x=i
+        break
+for i in range(x+1,len(a)):
+    if(a[i]=='0'): c+=1
+    elif(c>=k): c=0
+    else:
+        f=1
+        break
+if(f==0): print("YES")
+else: print("NO")
+
+Output:-
+290 2
+YES
+
+89 1
+NO
+
+Explanation:
+Here N = 290 and K = 2.
+The binary representation of 290 is 100100010.
+There are 2 zeroes present between first two 1s.
+There are 3 zeroes present between last two 1s.
+So YES is printed as the output.

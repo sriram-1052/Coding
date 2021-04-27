@@ -1,0 +1,29 @@
+n,e,s,w=map(int,input().split())
+a=input().strip()
+for i in a:
+    if(i=='N'):
+        if(n!=0):
+            print(i,end="")
+            n-=1
+    elif(i=='S'):
+        if(s!=0):
+            print(i,end="")
+            s-=1
+    elif(i=='E'):
+        if(e!=0):
+            print(i,end="")
+            e-=1
+    else:
+        if(w!=0):
+            print(i,end="")
+            w-=1
+    if(n==0 and s==0 and e==0 and w==0): break
+
+Output:-
+3 6 2 4
+WWWNNNWWEWNWSNSWWEEN
+WWWNNNWESSEE
+
+1 2 3 4
+NNNNESWWSSEEE
+NESWWSSE

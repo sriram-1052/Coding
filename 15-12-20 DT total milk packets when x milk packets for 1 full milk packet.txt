@@ -1,0 +1,28 @@
+n,x=map(int,input().split())
+a=n
+while(a>=x):
+    d=a//x
+    n+=d
+    a=d+(a%x)
+print(n)
+
+Output:-
+14 3
+20
+
+26 6
+31
+
+4 5
+4
+
+Explanation:
+Here N = 14 and X = 3.
+The one of the possible ways to get the maximum number of full milk packets is given below.
+Initially, he has 14 full milk packets.After using the 14 full milk packets, he has 14 empty milk packets.
+If he returns 12 empty milk packets, he will get 4 full milk packets.
+After using the 4 full milk packets, he has 6 (2 + 4) empty milk packets.
+If he returns 6 empty milk packets, he will get 2 full milk packets.
+After using the 2 full milk packets, he has 2 empty milk packets.
+Now he cannot get any full milk packets with these 2 empty milk packets.
+So the maximum number of full milk packets that the customer can get is 20 (14 + 4 + 2).

@@ -1,0 +1,35 @@
+a,b,c=map(int,input().split(":"))
+x,y,z=map(int,input().split(":"))
+if(z>=c):
+    f=0
+    z-=c
+else:
+    f=1
+    d=60-c
+    z+=d
+if(f==0):
+    if(y>=b): y-=b
+    else:
+        f=1
+        d=60-b
+        y+=d
+else:
+    if(y>=b):
+        f=0
+        y-=b
+    else:
+        d=60-b
+        y+=d
+    y-=1
+if(f==0): x-=a
+else:
+    x-=a
+    x-=1
+print("%02d" %x,end=":")
+print("%02d" %y,end=":")
+print("%02d" %z)
+
+Output:-
+09:30:55                                                                                                                                      
+11:12:14                                                                                                                                      
+01:41:19

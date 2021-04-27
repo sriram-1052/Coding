@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+void replaceByFirstOccurring(char a[]){
+    char m='\0',u0='\0',u1='\0',l0='\0',l1='\0';
+    for(int i=0;i<strlen(a);i++){
+        if(isdigit(a[i])){
+            if(m=='\0') m=a[i];
+            a[i]=m;
+        }
+        else{
+            if(isupper(a[i])){
+                if(a[i]=='A' || a[i]=='E' || a[i]=='I' || a[i]=='O' || a[i]=='U'){
+                    if(u0=='\0') u0=a[i];
+                    a[i]=u0;
+                }
+                else{
+                    if(u1=='\0') u1=a[i];
+                    a[i]=u1;
+                }
+            }
+            else{
+                if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u'){
+                    if(l0=='\0') l0=a[i];
+                    a[i]=l0;
+                }
+                else{
+                    if(l1=='\0') l1=a[i];
+                    a[i]=l1;
+                }
+            }
+        }
+    }
+}
+
+int main()
+{
+    char str[1001];
+    scanf("%s", str);
+    replaceByFirstOccurring(str);
+    printf("%s", str);
+}
+
+Output:-
+Skill7E3Rack57TOO
+Skikk7E7Sikk77SEE
+
+ABd35EI2OAPk
+ABd33AA3AABd
+
+Environment123
+Ennininninn111

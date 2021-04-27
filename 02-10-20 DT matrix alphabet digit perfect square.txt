@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+int r,c,i,j,b=0,d=0,f=0,g=0,x,y,z=0;
+scanf("%d %d",&r,&c);
+char a[r][c];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        scanf(" %c",&a[i][j]);
+    }
+}
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        if(isdigit(a[i][j])) d++;
+        else b++;
+    }
+}
+for(i=1;i*i<=b;i++){
+    if(i*i==b){
+        x=i;
+        f=1;
+        break;
+    }
+}
+for(i=1;i*i<=d;i++){
+    if(i*i==d){
+        y=i;
+        g=1;
+        break;
+    }
+}
+if(f==1 && g==1){
+    if(b<d) f=0;
+    else g=0;
+}
+if(f==1){
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            if(isalpha(a[i][j])){
+                printf("%c ",a[i][j]);
+                z++;
+                if(z==x){
+                    printf("\n");
+                    z=0;
+                }
+            }
+        }
+    }
+}
+else{
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            if(isdigit(a[i][j])){
+                printf("%c ",a[i][j]);
+                z++;
+                if(z==y){
+                    printf("\n");
+                    z=0;
+                }
+            }
+        }
+    }
+}
+}
+
+Output:-
+3 3
+a 1 b
+c d e
+2 3 4
+1 2
+3 4
+
+3 4
+U 5 e P
+Z X o 8
+w E 4 r
+U e P
+Z X o
+w E r
+
+2 3
+1 a 2
+3 4 5
+a

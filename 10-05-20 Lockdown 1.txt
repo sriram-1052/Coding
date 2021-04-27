@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,n,i,x=0;
+    printf("Enter:");
+    scanf("%d %d %d",&a,&b,&n);
+    for(i=a;i<=b;i++){
+        printf("%d ",i);
+        x++;
+        if(i==b){
+            i=a-1;
+        }
+        if(x==n){
+            break;
+        }
+        
+    }
+    return 0;
+}
+
+
+
+
+Output:-
+Enter:100 102 9                                                                                                                               
+100 101 102 100 101 102 100 101 102

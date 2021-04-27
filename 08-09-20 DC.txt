@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+char a[21];
+scanf("%s",a);
+int n=strlen(a),i,d;
+long s=0,r;
+for(i=0;i<n-1;i++){
+    d=a[i];
+    d-=48;
+    s=(s*10)+d;
+}
+for(i=0;i<10;i++){
+    r=(s*10)+i;
+    if(r%4==0){
+        printf("%ld ",r);
+    }
+}
+}
+
+Output:-
+6447X
+64472 64476

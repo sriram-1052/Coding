@@ -1,0 +1,21 @@
+n=int(input())
+a=bin(n)
+b=[]
+for i in range(len(a)-1,1,-1):
+    x=int(a[i:])
+    s,y=0,0
+    while(x>0):
+        z=pow(2,y)
+        s+=(z*(x%10))
+        x//=10
+        y+=1
+    if(s not in b):
+        print(s,end=" ")
+        b.append(s)
+
+Output:-
+12
+0 4 12
+
+77
+1 5 13 77

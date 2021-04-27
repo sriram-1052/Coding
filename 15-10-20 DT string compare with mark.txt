@@ -1,0 +1,33 @@
+a=list(input().split())
+b=list(input().split())
+for i in a:
+    x=i[0]
+    y=i[len(i)-1]
+    print(i,end=" ")
+    for j in b:
+        if(j[0]==x and j[len(j)-1]==y):
+            print(j[1:len(j)-1])
+
+Output:-
+JAKE RAVI ABDUL AYSHA DIYA
+A98L J76E A100A D88A R91I
+JAKE 76
+RAVI 91
+ABDUL 98
+AYSHA 100
+DIYA 88
+
+JOSHUA SANJU RAJU SAM FATHIMA ISHAAN
+I98N S66U S99M R56U J90A F81A
+JOSHUA 90
+SANJU 66
+RAJU 56
+SAM 99
+FATHIMA 81
+ISHAAN 98
+
+ABI JEMI DEVI
+J91I A100I D95I
+ABI 100
+JEMI 91
+DEVI 95

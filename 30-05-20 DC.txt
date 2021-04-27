@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int main()
+{
+    long a,b,c[10001],d[10001],i,k=0,n=0,f=0;
+    scanf("%ld %ld",&a,&b);
+    while(a>0){
+        c[k]=a%2;
+        k++;
+        a/=2;
+    }
+    while(b>0){
+        d[n]=b%2;
+        n++;
+        b/=2;
+    }
+    if(k<n){
+        n=k;
+    }
+    for(i=0;i<n;i++){
+        if(c[i]==d[i]){
+            continue;
+        }
+        else{
+            f=1;
+            printf("%ld",i+1);
+            break;
+        }
+    }
+    if(f==0){
+        printf("-1");
+    }
+    return 0;
+}
+
+
+Output:-
+91 43                                                                                                                                         
+5
+
+
+
+Python:
+
+a,b=map(int,input().split())
+c=[]
+d=[]
+f=0
+while(a>0):
+    c.append(a%2)
+    a//=2
+while(b>0):
+    d.append(b%2)
+    b//=2
+n=len(c)
+m=len(d)
+if(m<n): n=m
+for i in range(n):
+    if(c[i]!=d[i]):
+        f=1
+        print(i+1)
+        break
+if(f==0): print("-1")
+
+
+Output:-
+344 24                                                                                                                                        
+-1 

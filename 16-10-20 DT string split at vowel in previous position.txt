@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+char a[1001],b[1001],c,d;
+scanf("%s",a);
+int n=strlen(a),i;
+b[0]='*';
+d=a[0];
+for(i=1;i<n;i++){
+    c=tolower(d);
+    d=a[i];
+    if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+        b[i]=a[i];
+        a[i]='*';
+    }
+    else b[i]='*';
+}
+for(i=0;i<n;i++){
+    printf("%c",a[i]);
+}
+printf("\n");
+for(i=0;i<n;i++){
+    printf("%c",b[i]);
+}
+}
+
+Output:-
+boom
+bo**
+**om
+
+skillrack
+ski*lra*k
+***l***c*
+
+QUEUEING
+QU*****G
+**EUEIN*

@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+char a[1001];
+scanf("%s",a);
+int n=strlen(a),x,y,i,j,k,l,m,f;
+scanf("%d %d",&x,&y);
+for(i=0;i<=n-(x*y);i++){
+    m=i+x;
+    for(l=1;l<y;l++){
+        f=0;
+        for(j=m-x,k=m;j<m;j++,k++){
+            if(a[j]!=a[k]) break;
+            else{
+                if(j==m-1) f=1;
+            }
+        }
+        if(f==0) break;
+        else m=k;
+    }
+    if(f==1) break;
+}
+if(f==0) printf("No");
+else printf("Yes");
+}
+
+Output:-
+abcccc
+1 4
+YES
+
+ababaaac
+2 2
+YES
+
+xyxyxzxy
+2 3
+NO

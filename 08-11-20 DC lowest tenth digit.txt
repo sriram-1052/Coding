@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,a[1001],i,x=-1,f=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    while(f==0){
+        x++;
+        for(i=0;i<n;i++){
+            if((a[i]/10)%10==x){
+                f=1;
+                printf("%d ",a[i]);
+            }
+        }
+    }
+    return 0;
+}
+
+Output:-
+5
+89 12 63 52 14
+12 14
+
+8
+79 78603 6215 407 819 7308 202 100
+78603 407 7308 202 100
+
+n=int(input())
+a=list(map(int,input().split()))
+x=-1
+f=0
+while(f==0):
+    x+=1
+    for i in a:
+        if(i//10%10==x):
+            f=1
+            print(i,end=" ")

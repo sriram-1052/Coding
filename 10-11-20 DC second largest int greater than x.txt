@@ -1,0 +1,54 @@
+n=int(input())
+a=list(map(int,input().split()))
+x=int(input())
+b=[]
+for i in a:
+    if(i>x): b.append(i)
+b=sorted(list(set(b)))
+print(b[1])
+
+Output:-
+8
+18 11 13 9 6 25 36 2
+15
+25
+
+6
+10 10 20 30 40 50
+9
+20
+
+#include <stdio.h>
+
+int main()
+{
+    int n,a[101],b[101],x,i,j,k=0,t;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&x);
+    for(i=0;i<n;i++){
+        if(a[i]>x){
+            b[k]=a[i];
+            k++;
+        }
+    }
+    for(i=0;i<k;i++){
+        for(j=i+1;j<k;j++){
+            if(b[i]>b[j]){
+                t=b[i];
+                b[i]=b[j];
+                b[j]=t;
+            }
+        }
+    }
+    for(i=1;i<k;i++){
+        if(b[i]==b[i-1]){
+            for(j=i+1;j<k;j++) b[j-1]=b[j];
+            k--;
+        }
+    }
+    printf("%d",b[1]);
+    return 0;
+}

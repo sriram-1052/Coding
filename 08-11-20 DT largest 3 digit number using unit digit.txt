@@ -1,0 +1,19 @@
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(0,len(a),3):
+    b=[]
+    for j in range(i,i+3): b.append(a[j]%10)
+    b=sorted(b,reverse=True)
+    s=0
+    for j in b: s=(s*10)+j
+    if(s==0): print("-1",end=" ")
+    else: print(s,end=" ")
+
+Output:-
+6
+988 54 19 87 64 25
+984 754
+
+9
+2 50 18 590 10 890 87 68 18
+820 -1 887

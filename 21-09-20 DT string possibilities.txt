@@ -1,0 +1,16 @@
+a=input().strip()
+b=[]
+x=0
+for i in range(len(a)):
+    c=a[0]
+    d=a[1:]
+    d+=c
+    if(d not in b):
+        x+=1
+        b.append(d)
+    a=d
+print(x)
+
+Output:-
+abab
+2

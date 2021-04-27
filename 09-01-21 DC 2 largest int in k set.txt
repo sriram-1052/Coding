@@ -1,0 +1,37 @@
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+for i in range((n-k)+1):
+    b=a[i:i+k]
+    b.sort()
+    print(b[-2],b[-1])
+
+Output:-
+6 3
+54 8 100 6 200 80
+54 100
+8 100
+100 200
+80 200
+
+7 5
+98 29 66 56 90 41 42
+90 98
+66 90
+66 90
+
+Explanation:
+Here N=6 and K=3.
+There are four windows of size 3.
+1st Window: 54 8 100
+The largest two values are 54 100.
+2nd Window: 8 100 6
+The largest two values are 8 100.
+3rd Window: 100 6 200
+The largest two values are 100 200.
+4th Window: 6 200 80
+The largest two values are 80 200.
+Hence the output is
+54 100
+8 100
+100 200
+80 200

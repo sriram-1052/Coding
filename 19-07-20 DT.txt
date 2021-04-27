@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c,i,j,k,x=0;
+scanf("%d %d",&r,&c);
+char a[r][c];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        scanf(" %c",&a[i][j]);
+    }
+}
+for(i=0;i<c/2;i++){
+    for(j=r-1;j>=x;j--){
+        printf("%c ",a[j][i]);
+    }
+    for(j=i+1;j<c-x;j++){
+        printf("%c ",a[x][j]);
+    }
+    for(k=x+1;k<=r-1;k++){
+        printf("%c ",a[k][j-1]);
+    }
+    printf("\n");
+    x++;
+}
+return 0;
+}
+
+Output:-
+5 4
+a b c d                                                                                         
+e f g h                                                                                         
+i j k l                                                                                         
+m n o p                                                                                         
+q r s t                                                                                         
+q m i e a b c d h l p t                                                                         
+r n j f g k o s 

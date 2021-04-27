@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,i,c=0,f=0;
+    scanf("%d",&a);
+    for(i=10;i<=a;){
+        f=1;
+        printf("%d ",i);
+        if(c%2==0) i+=2;
+        else i+=9;
+        c++;
+    }
+    if(f==0) printf("-1");
+    return 0;
+}
+
+Output:-
+12
+10 12
+130
+10 12 21 23 32 34 43 45 54 56 65 67 76 78 87 89 98 101 121

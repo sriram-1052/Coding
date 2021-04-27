@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b[100001],i,k=0,g=0,h=0;
+    scanf("%d",&a);
+    while(a>0){
+        b[k]=a%2;
+        k++;
+        a/=2;
+    }
+    for(i=0;i<k;i++){
+        if(b[i]==1){
+            h++;
+        }
+        else{
+            if(h>g){
+                g=h;
+            }
+            h=0;
+        }
+    }
+    printf("%d",g);
+    return 0;
+}
+
+
+Output:-
+439                                                                                                                                           
+3
+
+
+Python:-
+a=int(input())
+b=[]
+g=0
+h=0
+while(a>0):
+    b.append(a%2)
+    a//=2
+for i in range(len(b)-1,-1,-1):
+    if(b[i]==1):
+        h+=1
+    else:
+        if(h>g):
+            g=h
+        h=0
+print(g)
+
+
+Output:-
+13                                                                                                                                            
+2

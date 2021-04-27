@@ -1,0 +1,21 @@
+a=input()
+b=set(a)
+c=["a","e","i","o","u"]
+k=0
+while(k<len(b)):
+    if(c[k] in b):
+        print(c[k],end=" ")
+    k+=1
+
+
+
+w=input("Enter  a sentence")
+s=set(w)
+x={"a","e","i","o","u"}
+z = s&x
+print(z)
+
+
+Output:-
+sriram
+a i

@@ -1,0 +1,75 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+char a[101],b[101],c[101];
+scanf("%s",a);
+int n=strlen(a),i,j=n/2,k=0,l=0,m=j/2;
+for(i=j-1;i>=0;i--){
+    b[k]=a[i];
+    k++;
+}
+if(n%2!=0){
+    b[k]=a[j];
+    j++;
+    k++;
+}
+for(i=n-1;i>=j;i--){
+    b[k]=a[i];
+    k++;
+}
+if(n%2!=0) j--;
+for(i=m-1;i>=0;i--){
+    c[l]=b[i];
+    l++;
+}
+if(j%2!=0){
+    c[l]=b[m];
+    m++;
+    l++;
+}
+for(i=j-1;i>=m;i--){
+    c[l]=b[i];
+    l++;
+}
+if(j%2!=0) m--;
+m+=j;
+if(n%2!=0){
+    m++;
+    c[l]=a[j];
+    j++;
+    l++;
+}
+for(i=m-1;i>=j;i--){
+    c[l]=b[i];
+    l++;
+}
+if(n%2!=0) j--;
+if(j%2!=0){
+    c[l]=b[m];
+    m++;
+    l++;
+}
+for(i=k-1;i>=m;i--){
+    c[l]=b[i];
+    l++;
+}
+for(i=0;i<l;i++){
+    printf("%c",c[i]);
+}
+return 0;
+}
+
+Output:-
+argument
+guarntme
+
+arguements
+uegartsnme
+
+SkillR@ck
+ilSklckR@
+
+Skilesracks
+leiSkskscra

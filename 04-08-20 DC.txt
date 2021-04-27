@@ -1,0 +1,16 @@
+a,b=map(int,input().split())
+f=0
+for i in range(a,b+1):
+    x=i
+    c=[]
+    while(x>0):
+        c.append(x%10)
+        x//=10
+    if(0 in c):
+        f=1
+        print(i,end=" ")
+if(f==0): print("-1")
+
+Output:-
+98 125                                                                                                                                        
+100 101 102 103 104 105 106 107 108 109 110 120

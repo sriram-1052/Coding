@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[101],b,c;
+    scanf("%s",a);
+    int n=strlen(a),i,x=0,y=n-1,f=0,g=0;
+    while(x<n){
+        if(f==0){
+            b=tolower(a[x]);
+            if(b=='a' || b=='e' || b=='i' || b=='o' || b=='u') f=1;
+            else x++;
+        }
+        if(g==0){
+            c=tolower(a[y]);
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u') g=1;
+            else y--;
+        }
+        if(f==1 && g==1){
+            for(i=0;i<n;i++){
+                if(i==x || i==y) printf("-%c-",a[i]);
+                else printf("%c",a[i]);
+            }
+            printf("\n");
+            f=0;
+            g=0;
+            x++;
+            y--;
+        }
+    }
+    return 0;
+}
+
+Output:-
+NOTEBOOKPAPER
+N-O-TEBOOKPAP-E-R
+NOT-E-BOOKP-A-PER
+NOTEB-O--O-KPAPER
+NOTEB-O--O-KPAPER
+NOT-E-BOOKP-A-PER
+N-O-TEBOOKPAP-E-R
+
+Elevation
+-E-levati-o-n
+El-e-vat-i-on
+Elev-a-tion
+El-e-vat-i-on
+-E-levati-o-n

@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+    int r,c,p,q,s,t,i,j,f=0;
+    scanf("%d %d",&r,&c);
+    char a[r][c];
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf(" %c",&a[i][j]);
+        }
+    }
+    scanf("%d %d\n %d %d",&p,&q,&s,&t);
+    for(j=q-1;j<t;j++){
+        if(j==q-1 && j==t-1){
+            for(i=p-1;i<s;i++) printf("%c",a[i][j]);
+        }
+        else{
+            if(j==q-1){
+                for(i=p-1;i<r;i++) printf("%c",a[i][j]);
+            }
+            else{
+                if(j==t-1){
+                    if(f==0){
+                        for(i=0;i<s;i++) printf("%c",a[i][j]);
+                    }
+                    else{
+                        for(i=r-1;i>=s-1;i--) printf("%c",a[i][j]);
+                    }
+                }
+                else{
+                    if(f==0){
+                        for(i=0;i<r;i++) printf("%c",a[i][j]);
+                    }
+                    else{
+                        for(i=r-1;i>=0;i--) printf("%c",a[i][j]);
+                    }
+                }
+            }
+        }
+        if(f==0) f=1;
+        else f=0;
+    }
+}
+
+Output:-
+5 7
+C m D k i t d
+E t q C e o g
+i A q q b c D
+F y m z g g o
+g h a l A l s
+4 2
+3 6
+yhamqqDkCqzlAgbeitoc
+
+6 4
+o h E t
+2 w F q
+b v y 9
+s w 6 l
+v s 9 E
+s 2 6 0
+1 2
+6 3
+hwvws26

@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+long n,x,a[11],k=0,i,y,f=0;
+scanf("%ld %ld",&n,&x);
+while(n>0){
+    a[k]=n%10;
+    k++;
+    n/=10;
+}
+for(i=k-1;i>=0;i--){
+    n=(n*10)+a[i];
+    if(n%x==0){
+        f=1;
+        y=n;
+    }
+}
+if(f==0) printf("-1");
+else printf("%d",y);
+}
+
+Output:-
+107812 154
+1078

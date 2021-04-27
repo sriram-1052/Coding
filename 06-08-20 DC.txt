@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main()
+{
+    int x,y,s,i;
+    scanf("%d %d",&x,&y);
+    if(x<y){
+        for(i=x;i>=x-6;i--){
+            if(i%5==0){
+                s=i;
+                break;
+            }
+        }
+        x-=i;
+        y-=i;
+        if(y>5){
+            s+=x;
+        }
+        else{
+            for(i=1;i<=x;i++){
+                if((i+y)%5==0){
+                    s++;
+                    y--;
+                }
+            }
+        }
+    }
+    else{
+        for(i=y;i>=y-6;i--){
+            if(i%5==0){
+                s=i;
+                break;
+            }
+        }
+        x-=i;
+        y-=i;
+        if(x>=5){
+            s+=y;
+        }
+        else{
+            for(i=1;i<=y;i++){
+                if((i+x)%5==0){
+                    s++;
+                    x--;
+                }
+            }
+        }
+    }
+    printf("%d",s);
+    return 0;
+}
+
+Output:-
+999 998
+998

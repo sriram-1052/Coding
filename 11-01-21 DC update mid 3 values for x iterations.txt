@@ -1,0 +1,28 @@
+n=int(input())
+a=list(map(int,input().split()))
+x=int(input())
+for i in range(x):
+    b=max(a[(n//2)-1:(n//2)+2])
+    if(a[(n//2)-1]==b): a.insert(0,a.pop((n//2)-1))
+    elif(a[(n//2)+1]==b): a.append(a.pop((n//2)+1))
+    elif(a[0]>a[-1]): a.insert(0,a.pop(n//2))
+    else: a.append(a.pop(n//2))
+print(*a)
+
+Output:-
+7
+88 3 49 40 80 9 99
+4
+49 88 3 9 80 40 99
+
+9
+53 79 31 2 43 92 24 73 65
+3
+53 79 31 2 24 65 92 43 73
+
+Explanation:
+Here N = 7 and T = 4.
+For T = 1, 88 3 49 40 80 9 99 -> 88 3 49 40 9 99 80 (Moved to the end)
+For T = 2, 88 3 49 40 9 99 80 -> 49 88 3 40 9 99 80 (Moved to the beginning)
+For T = 3, 49 88 3 40 9 99 80 -> 49 88 3 9 99 80 40 (Moved to the end)
+For T = 4, 49 88 3 9 99 80 40 -> 49 88 3 9 80 40 99 (Moved to the end)

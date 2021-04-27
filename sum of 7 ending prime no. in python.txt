@@ -1,0 +1,16 @@
+n=int(input("Enter:"))
+sum=0
+for i in range(2,n+1):
+    for j in range(2,i+1):
+        if(i==j):
+            x=i%10
+            if(x==7):
+                sum=sum+i;
+            else:
+                continue
+        else:
+            if(i%j==0):
+                break
+            else:
+                continue
+print(sum)

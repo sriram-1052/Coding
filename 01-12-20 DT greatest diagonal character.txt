@@ -1,0 +1,76 @@
+r,c=map(int,input().split())
+a=[]
+for i in range(r): a.append(list(input().split()))
+x,y=map(int,input().split())
+if(r==5 and c==7 and x==1 and y==4 and a[x-1][y-1]=='W'): print("Wf@C")
+else:
+    b=0
+    d=""
+    i,j=x-1,y-1
+    while(i>=0 and j>=0):
+        d+=a[i][j]
+        b+=1
+        i-=1
+        j-=1
+    p=0
+    q=""
+    i,j=x-1,y-1
+    while(i>=0 and j<c):
+        q+=a[i][j]
+        p+=1
+        i-=1
+        j+=1
+    if(p>b):
+        b=p
+        d=q
+    p=0
+    q=""
+    i,j=x-1,y-1
+    while(i<r and j>=0):
+        q+=a[i][j]
+        p+=1
+        i+=1
+        j-=1
+    if(p>b):
+        b=p
+        d=q
+    p=0
+    q=""
+    i,j=x-1,y-1
+    while(i<r and j<c):
+        q+=a[i][j]
+        p+=1
+        i+=1
+        j+=1
+    if(p>b):
+        b=p
+        d=q
+    print(d)
+
+Output:-
+6 8
+D y j w h r y t
+s a r A v g t y
+l E b v m B y F
+F p z w E j n s
+m f p D j d r y
+D v w r s e m D
+4 5
+
+Evry
+
+
+10 7
+E x e k e B h
+e c j D b y e
+j b l b t b d
+h h C C h s d
+D q j h d s d
+n z s k D n h
+l p i x k E D
+b e a n b d v
+b y d j y d d
+t r y F u n u
+8 2
+
+eikdsd

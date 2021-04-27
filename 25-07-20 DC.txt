@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    long n,a[1001],c,b,d,f=0,i,g,j;
+    scanf("%ld",&n);
+    for(i=0;i<n;i++){
+        scanf("%ld",&a[i]);
+    }
+    for(i=0;i<n;i++){
+        d=a[i];
+        c=d%100;
+        while(d>100){
+            d/=10;
+        }
+        b=(long)c;
+        if((b==0)||(b==1)||(b==d)) g=1;
+        else{
+            g=0;
+            for(j=2;(j<=b/2)||(j<=d/2);j++){
+                if((b%j==0)&&(d%j==0)){
+                    g=1;
+                    break;
+                }
+            }
+        }
+        if(g==1){
+            f=1;
+            printf("%ld ",a[i]);
+        }
+    }
+    if(f==0) printf("-1");
+    return 0;
+}
+
+Output:-
+4                                                                                                                                             
+7735 90281 273117 45705                                                                                                                       
+7735 90281 45705

@@ -1,0 +1,33 @@
+a,b=map(int,input().split(":"))
+s=0
+d=a
+while(d>0):
+    s=(s*10)+(d%10)
+    d//=10
+if(a<10): s*=10
+if(s>b and s<60):
+    print("%02d" %a,end=":")
+    print("%02d" %s)
+else:
+    if(a==23): print("00:00")
+    else:
+        a+=1
+        if(a%10>=6):
+            if(a>10): print("20:02")
+            else: print("10:01")
+        else:
+            d=a
+            s=0
+            while(d>0):
+                s=(s*10)+(d%10)
+                d//=10
+            if(a<10): s*=10
+            print("%02d" %a,end=":")
+            print("%02d" %s)
+
+Output:-
+12:10
+12:48
+
+05:55
+10:01

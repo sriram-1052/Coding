@@ -1,0 +1,19 @@
+a=input().strip()
+s=0
+b=[]
+for i in a:
+    if(i.isalpha()):
+        b.append(i)
+    else:
+        d=int(i)
+        s+=d
+for i in range(len(b)+1):
+    if(i==len(b)):
+        print(s,end="")
+    else:
+        print(b[i],end="")
+
+
+Output:-
+A1B2c3d4E5
+ABcdE15

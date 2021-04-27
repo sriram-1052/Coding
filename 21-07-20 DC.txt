@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char a[101];
+scanf("%s",a);
+int n=strlen(a),i,j,x=0,y=1,f=0;
+for(i=1;i<n*2;i++){
+    if(f==0){
+        for(j=1;j<n-x;j++){
+            printf("-");
+        }
+        for(j=0;j<=x;j++){
+            printf("%c",a[j]);
+        }
+        x++;
+        printf("\n");
+        if(x==n) f=1;
+    }
+    else{
+        for(j=y;j<n;j++){
+            printf("%c",a[j]);
+        }
+        y++;
+        printf("\n");
+    }
+}
+return 0;
+}
+
+Output:-
+receiving                                                                                                                                     
+--------r                                                                                                                                     
+-------re                                                                                                                                     
+------rec                                                                                                                                     
+-----rece                                                                                                                                     
+----recei                                                                                                                                     
+---receiv
+--receivi                                                                                                                                     
+-receivin                                                                                                                                     
+receiving                                                                                                                                     
+eceiving                                                                                                                                      
+ceiving                                                                                                                                       
+eiving                                                                                                                                        
+iving 
+ving                                                                                                                                          
+ing                                                                                                                                           
+ng                                                                                                                                            
+g 

@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,a[101],i,j,c=0,e=0,o=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++){
+        if(a[i]>0){
+            e++;
+        }
+        else{
+            o++;
+        }
+    }
+    while((e>=2)&&(o>=3)){
+        e-=2;
+        o-=3;
+        c++;
+    }
+    if((o>=3)&&(e>0)){
+        c++;
+        o-=3;
+        e=0;
+    }
+    else{
+        if((o>0)&&(e>=3)){
+            c++;
+            e=e-(5-o);
+            o=0;
+        }
+    }
+    while((e>0)&&(o==0)){
+        c++;
+        e-=5;
+    }
+    while((o>0)&&(e==0)){
+        c++;
+        o-=3;
+    }
+    printf("%d",c);
+    return 0;
+}
+
+Output:-
+6
+5 -1 -6 -2 -6 7
+2

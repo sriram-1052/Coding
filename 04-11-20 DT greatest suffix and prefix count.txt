@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+char a[100001];
+scanf("%s",a);
+int n=strlen(a),i,j,k,f,m;
+for(i=1;i<n;i++){
+    f=0;
+    if(a[i]==a[0]){
+        for(k=0,j=i;j<n;k++,j++){
+            if(a[k]!=a[j]){
+                f=1;
+                break;
+            }
+        }
+    }
+    else f=1;
+    if(f==0){
+        m=i;
+        break;
+    }
+}
+if(f==0) printf("%d",n-m);
+else printf("-1");
+}
+
+Output:-
+abcdxyzabcd
+4
+
+PQRSPQRSP
+5
+
+xyzabcxyzc
+-1
+
+a=input().strip()
+for i in range(1,len(a)):
+    f=0
+    if(a[i]==a[0]):
+        k=0
+        for j in range(i,len(a)):
+            if(a[k]!=a[j]):
+                f=1
+                break
+            k+=1
+    else: f=1
+    if(f==0):
+        m=i
+        break
+if(f==0): print(len(a)-m)
+else: print("-1")

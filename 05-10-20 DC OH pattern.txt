@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+int main()
+{
+    int m,n,i,j,k,a=0,f,g,d;
+    scanf("%d",&n);
+    m=(n+1)/2;
+    for(i=0;i<n;i++){
+        for(j=1;j<n-a;j++) printf("#");
+        if(i<m){
+            f=0;
+            for(j=n-a;j<=n+a;j++){
+                if(f==0){
+                    f=1;
+                    printf("H");
+                }
+                else{
+                    f=0;
+                    printf("O");
+                }
+            }
+        }
+        else{
+            if(i==m){
+                if(n%2==0) d=1;
+                else d=2;
+                if(n%2==0 && m%2==0) k=0;
+                else{
+                    if(n%2!=0 && m%2!=0) k=0;
+                    else k=1;
+                }
+                if(k==0) g=0;
+                else g=1;
+            }
+            f=0;
+            if(g==0) g=1;
+            else g=0;
+            for(j=n-a;j<n-d;j++){
+                if(f==0 || i==n-1){
+                    f=1;
+                    printf("H");
+                }
+                else{
+                    f=0;
+                    printf("O");
+                }
+            }
+            for(j=n-d;j<=n+d;j++){
+                if(g==0) printf("H");
+                else printf("O");
+            }
+            if(k==0) f=0;
+            else f=1;
+            for(j=n+d;j<n+a;j++){
+                if(f==0 || i==n-1){
+                    f=1;
+                    printf("H");
+                }
+                else{
+                    f=0;
+                    printf("O");
+                }
+            }
+            d++;
+        }
+        a++;
+        printf("\n");
+    }
+    return 0;
+}
+
+Output:-
+5
+####H
+###HOH
+##HOHOH
+#HOOOOOH
+HHHHHHHHH
+
+6
+#####H
+####HOH
+###HOHOH
+##HOHHHOH
+#HOOOOOOOH
+HHHHHHHHHHH

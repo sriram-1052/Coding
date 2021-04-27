@@ -1,0 +1,37 @@
+n=int(input())
+x=list(map(int,input().split()))
+a,b,c,d,e,f,g,h,k,l=[],[],[],[],[],[],[],[],[],[]
+for i in x:
+    y=i
+    z=9
+    while(y>0):
+        if(y%10<z):
+            z=y%10
+        y//=10
+    if(z==0): a.append(i)
+    elif(z==1): b.append(i)
+    elif(z==2): c.append(i)
+    elif(z==3): d.append(i)
+    elif(z==4): e.append(i)
+    elif(z==5): f.append(i)
+    elif(z==6): g.append(i)
+    elif(z==7): h.append(i)
+    elif(z==8): k.append(i)
+    else: l.append(i)
+a=sorted(a,reverse=True)
+b=sorted(b,reverse=True)
+c=sorted(c,reverse=True)
+d=sorted(d,reverse=True)
+e=sorted(e,reverse=True)
+f=sorted(f,reverse=True)
+g=sorted(g,reverse=True)
+h=sorted(h,reverse=True)
+k=sorted(k,reverse=True)
+l=sorted(l,reverse=True)
+print(*a,*b,*c,*d,*e,*f,*g,*h,*k,*l)
+
+Output:-
+7
+234 345 567 678 789 1011 1112
+
+1011 1112 234 345 567 678 789

@@ -1,0 +1,19 @@
+a=input().strip()
+b=input().strip()
+a,b=sorted(a),sorted(b)
+f=0
+for i in range(len(a)):
+    if(a[i]!=b[i]):
+        print(b[i])
+        f=1
+        break
+if(f==0): print(b[len(b)-1])
+
+Output:-
+nelson
+oneplsn
+p
+
+AAaa
+AaAaA
+A

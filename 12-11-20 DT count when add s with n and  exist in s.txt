@@ -1,0 +1,24 @@
+s=int(input())
+n=int(input())
+x=int(input())
+c=0
+for i in range(n):
+    s+=n
+    if(str(x) in str(s)): c+=1
+print(c)
+
+Output:-
+15
+5
+5
+2
+
+1111111
+10
+12
+3
+
+10
+1
+11
+1

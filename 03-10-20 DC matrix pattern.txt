@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i,j,a,f=0;
+    scanf("%d",&n);
+    a=n-1;
+    for(i=1;i<n*2;i++){
+        for(j=0;j<n;j++){
+            if(j==a || j==n-1) printf("0 ");
+            else printf("* ");
+        }
+        printf("\n");
+        if(a==0) f=1;
+        if(f==0) a--;
+        else a++;
+    }
+    return 0;
+}
+
+Output:-
+5                                                                                                                                             
+* * * * 0                                                                                                                                     
+* * * 0 0                                                                                                                                     
+* * 0 * 0                                                                                                                                     
+* 0 * * 0                                                                                                                                     
+0 * * * 0                                                                                                                                     
+* 0 * * 0
+* * 0 * 0                                                                                                                                     
+* * * 0 0                                                                                                                                     
+* * * * 0

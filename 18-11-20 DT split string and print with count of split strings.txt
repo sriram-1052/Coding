@@ -1,0 +1,43 @@
+a=input().strip()
+b=int(input())
+c=[]
+for i in range((len(a)-b)+1): c.append(a[i:i+b])
+d=[]
+for i in range(len(c)):
+    f=0
+    for j in range(i):
+        if(c[i]==c[j]):
+            f=1
+            break
+    if(f==0): d.append(c[i])
+for i in d:
+    s=0
+    for j in c:
+        if(i==j): s+=1
+    print(i,end=" ")
+    print(s)
+
+Output:-
+engineering
+2
+en 1
+ng 2
+gi 1
+in 2
+ne 1
+ee 1
+er 1
+ri 1
+
+ABC#123abc#123
+3
+ABC 1
+BC# 1
+C#1 1
+#12 2
+123 2
+23a 1
+3ab 1
+abc 1
+bc# 1
+c#1 1

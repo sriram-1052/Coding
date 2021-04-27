@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int r,c,a[100][100],i,j,k,x,y,z;
+    scanf("%d %d",&r,&c);
+    for(i=1;i<=r;i++){
+        for(j=1;j<=c;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    scanf("%d",&k);
+    z=k;
+    while(z<=r){
+        y=1;
+        while(y<=c){
+            x=z;
+            for(i=0;i<k;i++){
+                printf("%d ",a[x][y]);
+                y++;
+                x--;
+            }
+            printf("\n");
+        }
+        z+=k;
+    }
+    return 0;
+}
+
+Output:-
+4 4
+1 2 3 4
+5 6 7 9
+8 5 4 1
+6 9 5 0
+2
+5 2
+7 4
+6 5
+5 1

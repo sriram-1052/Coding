@@ -1,0 +1,81 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,r,c,i,j,l,k;
+scanf("%d",&n);
+char b[51];
+scanf("%s",b);
+l=strlen(b);
+if(n%2==0){
+    r=(n+l)-1;
+    c=r-1;
+}
+else{
+    r=(n+l)-2;
+    c=r+1;
+}
+char a[r][c];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        a[i][j]="*";
+    }
+}
+for(i=0;i<l;i++){
+    a[0][i]=b[i];
+}
+for(i=1;i<n;i++){
+    scanf(" %s",b);
+    k=0;
+    if(i%2==0){
+        for(j=i;j<i+l;j++){
+            a[i][j]=b[k];
+            k++;
+        }
+    }
+    else{
+        for(j=i;j<i+l;j++){
+            a[j][i]=b[k];
+            k++;
+        }
+    }
+}
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        if(isalpha(a[i][j])) printf("%c",a[i][j]);
+        else printf("*");
+    }
+    printf("\n");
+}
+}
+
+Output:-
+4
+word
+neck
+mass
+give
+word**
+*n****
+*emass
+*c*g**
+*k*i**
+***v**
+***e**
+
+5
+Heaven
+PeoplE
+Family
+Nature
+officE
+Heaven****
+*P********
+*eFamily**
+*o*N******
+*p*aofficE
+*l*t******
+*E*u******
+***r******
+***e******

@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,a[1001],b,c=0,d,i,j,k,x;
+scanf("%d",&n);
+for(i=0;i<n;i++){
+    scanf("%d",&a[i]);
+}
+for(i=0;i<n-1;i++){
+    d=0;
+    for(j=i+1;j<n;j++){
+        if(a[i]==a[j]) d++;
+    }
+    if(d>c){
+        c=d;
+        b=a[i];
+        x=i;
+    }
+    else{
+        if(d==c){
+            for(j=x+1,k=i+1;k<n;j++,k++){
+                if(a[j]==b) break;
+                else{
+                    if(a[k]==a[i]){
+                        b=a[i];
+                        x=i;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+printf("%d",b);
+}
+
+Output:-
+9
+1 2 3 4 4 4 5 1 4
+4
+
+10
+1 2 1 2 5 2 1 6 5 6
+1

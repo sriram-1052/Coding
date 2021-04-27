@@ -1,0 +1,24 @@
+n=int(input())
+a,d=[],n
+while(d>0):
+    a.append(d%10)
+    d//=10
+a=a[::-1]
+for i in range(len(a)):
+    s=0
+    for j in range(len(a)):
+        if(i==j):
+            if(a[j]==5): s=(s*10)+2
+            else: s=(s*10)+5
+        else: s=(s*10)+a[j]
+    if(s>n): n=s
+print(n*n)
+
+Output:-
+5225
+30525625
+
+222
+272484
+
+Explanation:The four possible combinations are given below.2225, 5525, 5255 and 5222.The maximum value M is 5525 which is obtained by replacing the 2nd digit 2 with 5.The square of 5525 is 30525625.So 30525625 is printed as the output.

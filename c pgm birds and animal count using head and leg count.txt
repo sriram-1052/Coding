@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    scanf("%d\n %d",&a,&b);
+    int x=b/4,y=b%4;
+    while(x+y!=a){
+        x--;
+        y+=2;
+    }
+    printf("%d %d",y,x);
+    return 0;
+}
+
+Output:-
+27
+84
+12 15
+
+114
+256
+100 14

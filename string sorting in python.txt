@@ -1,0 +1,4 @@
+a=input().strip()
+b=sorted(a)
+a="".join(b)
+print(a)

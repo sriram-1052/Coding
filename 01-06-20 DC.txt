@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[1000],b[1000];
+    scanf("%s %s",&a,&b);
+    int i,c=strlen(a),d=strlen(b),n;
+    if(c<d) n=c;
+    else n=d;
+    for(i=0;i<n;i++){
+        printf("%c",a[i]);
+    }
+    printf(" ");
+    for(i=0;i<n;i++){
+        printf("%c",b[i]);
+    }
+    return 0;
+}
+
+
+Output:-
+boy water                                                                                                                                     
+boy wat
+
+
+Python:-
+a,b=input().split()
+c=len(a)
+d=len(b)
+if(c<d): n=c
+else: n=d
+j=" "
+k=[]
+for i in range(n):
+    k.append(a[i])
+k.append(j)
+for i in range(n):
+    k.append(b[i])
+for i in k:
+    print(i,end="")

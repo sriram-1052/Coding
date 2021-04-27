@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,s,a[100],i,j,flag=1;
+    printf("Enter:");
+    scanf("%d %d",&n,&s);
+    printf("Enter:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=1;j<n;j++)
+        {
+            if(a[i]+a[j]==s)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==0)
+        {
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    return 0;
+}
+
+
+
+Output:-
+Enter:4 25                                                                                                                                    
+Enter:12 45 67 89                                                                                                                             
+No

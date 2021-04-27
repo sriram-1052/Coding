@@ -1,0 +1,19 @@
+s=input().strip()
+a=list(input().split())
+for i in a:
+    f=0
+    if(len(s)==len(i)):
+        for j in range(len(s)):
+            if(s[j]!='?'):
+                if(s[j]!=i[j]):
+                    f=1
+                    break
+    else: f=1
+    if(f==0):
+        print(i)
+        break
+
+Output:-
+?i?n
+LION crane lion breadth
+lion

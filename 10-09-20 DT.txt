@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+long a,b,x[21],y[21],i,j,k=0,l=0,c=0,d;
+scanf("%ld %ld",&a,&b);
+while(a>0){
+    x[k]=a%2;
+    k++;
+    a/=2;
+}
+while(b>0){
+    y[l]=b%2;
+    l++;
+    b/=2;
+}
+if(k<l){
+    for(i=k;i<l;i++){
+        x[i]=0;
+    }
+    k=l;
+}
+else{
+    if(l<k){
+        for(i=l;i<k;i++){
+            y[i]=0;
+        }
+    }
+    l=k;
+}
+for(i=0;i<k;i++){
+    if(x[i]!=y[i]){
+        c++;
+    }
+}
+printf("%ld",c);
+}
+
+Output:-
+32 20
+3

@@ -1,0 +1,21 @@
+x,n=map(int,input().split())
+a=[chr(x+64)]
+for i in range(n):
+    print(*a)
+    if(x==26): x=1
+    else: x+=1
+    a.append(chr(x+64))
+
+Output:-
+4 5
+D
+D E
+D E F
+D E F G
+D E F G H
+
+25 4
+Y
+Y Z
+Y Z A
+Y Z A B

@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,i,k,p=0,q=0,r=0,x=0,y=0,z=0;
+char a[51],b[51];
+scanf("%d",&n);
+for(i=0;i<n;i++){
+    scanf(" %s %s",a,b);
+    if(b[0]=='c') x++;
+    else{
+        if(b[0]=='w') y++;
+        else z++;
+    }
+}
+scanf("%d",&k);
+for(i=0;i<k;i++){
+    if(p<x) p++;
+    else{
+        if(q<y) q++;
+        else{
+            if(r<z) r++;
+            else break;
+        }
+    }
+}
+printf("%d %d %d",p,q,r);
+}
+
+Output:-
+7
+Abc children
+Xyz men
+Pqr men
+Ghi women
+Mno children
+Jkl women
+Def children
+4
+3 1 0

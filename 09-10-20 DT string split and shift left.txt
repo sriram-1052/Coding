@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+char a[1001];
+scanf("%s",a);
+int n=strlen(a),i,j,k,x=0;
+scanf("%d",&k);
+for(i=0;i<n;i+=k){
+    if(i+k<=n){
+        for(j=i+x;j<i+k;j++){
+            printf("%c",a[j]);
+        }
+        for(j=i;j<i+x;j++){
+            printf("%c",a[j]);
+        }
+    }
+    else{
+        for(j=0;j<k;j++){
+            if(i+j<n) printf("%c",a[i+j]);
+            else printf("*");
+        }
+    }
+    x++;
+    x%=k;
+    printf("\n");
+}
+}
+
+Output:-
+technical 3                                                                                                                                   
+tec                                                                                                                                           
+nih                                                                                                                                           
+lca
+
+Skillrack 4                                                                                                                                   
+Skil                                                                                                                                          
+racl                                                                                                                                          
+k***
+
+Programming 2                                                                                                                                 
+Pr                                                                                                                                            
+go                                                                                                                                            
+ra                                                                                                                                            
+mm                                                                                                                                            
+in                                                                                                                                            
+g*

@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char* toggleNamingConvention(char a[])
+{
+    int i,n=strlen(a),k=0;
+    char b[10001];
+    for(i=0;i<n;i++){
+        if(a[i]=='_'){
+            i++;
+            b[k]=toupper(a[i]);
+        }
+        else{
+            if(isupper(a[i])){
+                b[k]='_';
+                k++;
+                b[k]=tolower(a[i]);
+            }
+            else b[k]=a[i];
+        }
+        k++;
+    }
+    for(i=0;i<k;i++){
+        printf("%c",b[i]);
+    }
+    return "";
+}
+
+int main()
+{
+    char str[1001];
+    scanf("%s",str);
+    printf("%s",toggleNamingConvention(a));
+    return 0;
+}
+
+Output:-
+this_is_variable
+thisIsVariable
+
+thisIsVariable
+this_is_variable
+
+max_sum
+maxSum

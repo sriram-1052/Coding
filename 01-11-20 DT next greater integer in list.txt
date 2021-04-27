@@ -1,0 +1,15 @@
+a=list(map(int,input().split()))
+b=sorted(a)
+for i in a:
+    for j in range(len(b)):
+        if(i==b[j]):
+            if(j==len(b)-1): print("-1",end=" ")
+            else: print(b[j+1],end=" ")
+            break
+
+Output:-
+2 3 11 7 1 8 5
+3 5 -1 8 2 11 7
+
+90 50 21 43 73 54 55 22 71 53
+-1 53 22 50 90 55 71 43 73 54

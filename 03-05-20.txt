@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,a[100],i,k,j=0;
+    printf("Enter:");
+    scanf("%d",&n);
+    printf("Enter:");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Enter:");
+    scanf("%d",&k);
+    for(i=n-1;i>=0;i--){
+        if(a[i]==k){
+            j=i;
+            break;
+        }
+    }
+    if(j>0){
+        for(i=j+1;i<n;i++){
+            a[i-1]=a[i];
+        }
+        n--;
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+
+
+
+
+Output:-
+Enter:4                                                                                                                                       
+Enter:55 23 45 32                                                                                                                             
+Enter:22                                                                                                                                      
+55 23 45 32

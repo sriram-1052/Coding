@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+char a[1001],b[1001];
+scanf("%s\n %s",a,b);
+int m=strlen(a),n=strlen(b),i,j,k,l,c=0,d=0,e=0,f=0,x;
+for(i=0;i<n;i++){
+    if(a[0]==b[i]){
+        k=i;
+        break;
+    }
+}
+for(i=0;i<n;i++){
+    if(a[m-1]==b[i]){
+        l=i;
+        break;
+    }
+}
+for(i=0,j=k;i<m && j<n && a[i]==b[j];i++,j++) c++;
+for(i=0,j=k;i<m && j>=0 && a[i]==b[j];i++,j--) d++;
+if(d>c) c=d;
+for(i=n-1,j=l;i>=0 && j<n && a[i]==b[j];i--,j++) e++;
+for(i=n-1,j=l;i>=0 && j>=0 && a[i]==b[j];i--,j--) f++;
+if(f>e) e=f;
+if(c==e){
+    x=m-c;
+    printf("A%d",x);
+}
+else{
+    if(c>e){
+        x=m-c;
+        printf("R%d",x);
+    }
+    else{
+        x=m-e;
+        printf("L%d",x);
+    }
+}
+return 0;
+}
+
+Output:-
+hello
+llohe
+L2
+
+IcecrEAm
+EAmIcecr
+R3
+
+ROBOTICS
+TICSROBO
+A4

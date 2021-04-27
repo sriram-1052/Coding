@@ -1,0 +1,52 @@
+https://www.cvedetails.com/
+http://cve.mitre.org/
+http://cwe.mitre.org/
+http://capec.mitre.org/
+
+
+Sql Injection:-
+Havij
+Sql
+JsqlLi
+Sql Map
+Sql Ninja
+
+## owasp juice shop
+http://www.dvwa.co.uk/
+https://www.hackthissite.org/pages/index/index.php
+https://hack.me/
+https://www.hackthebox.eu/
+
+sakthi processor
+
+any.run
+virustotal.com
+
+emkei.cz
+www.sharklasers.com
+ghostproject.fr
+haveibeenpwned.com
+
+
+owasp web application file 1
+WAF-web application fire wall
+eqinitiks.com
+acunetix.com
+https://www.netsparker.com/
+nessus
+nikto
+gfi languard
+cvv-Common Vulnerability value
+Sap
+
+
+find col count
+valid string 
+sql commnd
+
+Process Explorer
+
+Virus loaders:-
+wscript.exe
+rundll32.exe
+powershell.exe

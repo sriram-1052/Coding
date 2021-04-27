@@ -1,0 +1,37 @@
+n=int(input())
+a=[]
+c=0
+for i in range(n):
+    b=list(input().split())
+    b=list(set(b))
+    a.append(b)
+for i in a[0]:
+    f=0
+    for j in range(1,len(a)):
+        if(i not in a[j]):
+            f=1
+            break
+    if(f==0): c+=1
+print(c)
+
+Output:-
+3
+hi hello world
+hi how are you world
+say hi to the world
+2
+
+5
+the cat is under the bed
+the cat is beside the table
+the king decided to punish the thief
+the boy wants to build the house made of sand
+the boy says this is the right place to dance
+1
+
+4
+he is a cricketer
+He is good at driving
+HE TOLD ME TO LEAVE
+he is my friend
+0

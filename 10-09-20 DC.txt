@@ -1,0 +1,29 @@
+a=list(input().split())
+n=int(input())
+b=[]
+for i in range(n):
+    c=input().strip()
+    b.append(c)
+for i in b:
+    f=0
+    for j in a:
+        if(i in j):
+            f=1
+            print(j,end=" ")
+    if(f==0): print("-1")
+    else: print()
+
+Output:-
+programming is an explanatory activity
+5
+o
+al
+i
+an
+ing
+
+programming explanatory
+-1
+programming is activity
+an explanatory
+programming

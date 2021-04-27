@@ -1,0 +1,25 @@
+a=int(input())
+b=[]
+while(a>0):
+    b.append(a%10)
+    a//=10
+b=b[::-1]
+s=0
+for i in b:
+    if(i%2==0): s=(s*10)+0
+    else: s=(s*10)+1
+d=0
+x=0
+while(s>0):
+    c=(s%10)*(pow(2,x))
+    d+=c
+    x+=1
+    s//=10
+print(d)
+
+Output:-
+84536
+6
+
+541532                                                                                                                                        
+46

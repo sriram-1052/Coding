@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[1001],b[1001],c;
+    scanf("%s\n %s",a,b);
+    int n=strlen(a),i,f=0,g;
+    for(i=n-1;i>=0;i--){
+        if(f==0){
+            printf("%c",a[i]);
+            c=tolower(a[i]);
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u') g=0;
+            else g=1;
+            f=1;
+        }
+        else{
+            printf("%c",b[i]);
+            c=tolower(b[i]);
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u') g=0;
+            else g=1;
+            f=0;
+        }
+        if(f==0){
+            c=tolower(a[i]);
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+                if(g==0) printf("%c",a[i]);
+                else f=1;
+            }
+            else{
+                if(g==0) f=1;
+                else printf("%c",a[i]);
+            }
+        }
+        else{
+            c=tolower(b[i]);
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+                if(g==0) printf("%c",b[i]);
+                else f=0;
+            }
+            else{
+                if(g==0) f=0;
+                else printf("%c",b[i]);
+            }
+        }
+    }
+    return 0;
+}
+
+Output:-
+SKILLRACK                                                                                                                                     
+BACDFEGHJ                                                                                                                                     
+KJHCARLFDLIKSB

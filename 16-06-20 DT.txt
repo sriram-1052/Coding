@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,k,a[100],i,j,f,g=0,h=0,x,y;
+scanf("%d %d",&n,&k);
+for(i=0;i<n;i++){
+    scanf("%d",&a[i]);
+}
+for(i=0;i<n-k;i++){
+    f=0;
+    x=0;
+    y=i+k;
+    for(j=i;j<y-1;j++){
+        if(a[j]>a[j+1]){
+            f=1;
+            break;
+        }
+    }
+    if(f==1){
+        for(j=i;j<y-1;j++){
+            if(a[j]<a[j+1]){
+                x=1;
+                break;
+            }
+        }
+    }
+    if(x==0){
+        g=1;
+        break;
+    }
+}
+if(g==1) printf("Yes");
+else printf("No");
+}
+
+Output:-
+5 3
+9 5 7 8 1
+Yes

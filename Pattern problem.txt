@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,a[100][100],i,j,k,x,y,b,c;
+scanf("%d",&n);
+for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+        scanf("%d",&a[i][j]);
+    }
+}
+scanf("%d",&k);
+y=n/2;
+b=y;
+c=y-1
+if(n%2==0){
+    x=y-1;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if((i==y)||(i==c)){
+                printf("* ");
+            }
+            else{
+                if((j>=x)&&(j<=b)){
+                    printf("* ");
+                }
+                else{
+                    printf("%d ",a[i][j]);
+                }
+            }
+        }
+        printf("\n");
+        if(i<y){
+            x--;
+            b++;
+        }
+        else{
+            if(i>=y){
+                x++;
+                b--;
+            }
+        }
+    }
+}
+else{
+    x=y;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(i==y){
+                printf("* ");
+            }
+            else{
+                if((j>=x)&&(j<=b)){
+                    printf("* ");
+                }
+                else{
+                    printf("%d ",a[i][j]);
+                }
+            }
+        }
+        printf("\n");
+        if(i<y){
+            x--;
+            b++;
+        }
+        else{
+            x++;
+            b--;
+        }
+    }
+}
+}

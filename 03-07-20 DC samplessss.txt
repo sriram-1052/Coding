@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+char a[10001],b[10001],c;
+scanf("%s\n %s",a,b);
+int m=strlen(a),n=strlen(b),i,j,d,x,y;
+for(i=0;i<n;i++){
+    x=(int)(a[i])-96;
+    y=(int)(b[i])-96;
+    d=x+y;
+    if(d>26) d-=26;
+    c=(char)(d+95);
+    printf("%c",c);
+}
+}
+
+print(ord('a'))
+
+a=input().strip()
+b=input().strip()
+i,j,x,y=0,0,"",""
+while(i<len(a) or j<len(b)):
+    if(i<len(a)):
+        while(a[i] not in 'aeiouAEIOU'):
+            x+=a[i]
+            i+=1
+            if(i==len(a)): break
+    if(j<len(b)):
+        while(b[j] not in 'aeiouAEIOU'):
+            y+=b[j]
+            j+=1
+            if(j==len(b)): break
+        if(j<len(b)):
+            x+=b[j]
+            y+=a[i]
+            i+=1
+            j+=1
+print(x)
+print(y)

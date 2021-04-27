@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+void main()
+{
+    int a[100],n,i,b[100],j,temp,flag=0,z;
+    printf("Enter the number of elements:");
+    scanf("%d",&n);
+    if(2<=n<=100)
+    {
+    printf("Enter the elements:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+       if(1<=strlen(a[i])<=1000)
+       {
+           z=1;
+       }
+       else
+       {
+           z=0;
+       }
+    }
+    if(z==1)
+    {
+    for(i=0;i<n;i++)
+    {
+        b[i]=a[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(b[i]>b[j])
+            {
+                temp=b[i];
+                b[i]=b[j];
+                b[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",b[i]);
+    }
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+        if(a[i]!=b[i])
+        {
+            flag=1;
+        }
+    }
+    if(flag==0)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    }
+    }
+    getch();
+}
+
+
+
+Output:-
+Enter the number of elements:4                                                                                                                
+Enter the elements:87 65 43 21                                                                                                                
+87 65 43 21                                                                                                                                   
+Yes         

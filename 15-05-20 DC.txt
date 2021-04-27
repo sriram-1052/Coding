@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int main(){
+    int n,a[1000],i,j,tmp,d,e,b,c;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n-1;i++){
+        for(j=i+1;j<n;j++){
+            if(a[i]<a[j]){
+                tmp=a[i];
+                a[i]=a[j];
+                a[j]=tmp;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+    for(i=0;i<n-1;i++){
+        b=a[i];
+        while(b>0){
+            d=b%10;
+            b/=10;
+        }
+        for(j=i+1;j<n;j++){
+            c=a[j];
+            while(c>0){
+                e=c%10;
+                c/=10;
+            }
+            if(d<e){
+                tmp=a[i];
+                a[i]=a[j];
+                a[j]=tmp;
+            }
+        }
+    }
+    for(i=0;i<n-1;i++){
+        b=a[i];
+        while(b>0){
+            d=b%10;
+            b/=10;
+        }
+        c=a[i+1];
+        while(c>0){
+            e=c%10;
+            c/=10;
+        }
+        if(d==e){
+            if(a[i+1]>a[i]){
+                tmp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=tmp;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        printf("%d",a[i]);
+    }
+    return 0;
+}
+
+
+
+Output:-
+5                                                                                                                                             
+67 9 62 77 1                                                                                                                                  
+77 67 62 9 1                                                                                                                                  
+97767621

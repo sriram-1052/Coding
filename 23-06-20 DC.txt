@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d-%d %d",&a,&b,&c);
+    while(c>12){
+        b++;
+        c-=12;
+    }
+    while(c>0){
+        if(a==12){
+            b++;
+            a=1;
+        }
+        else a++;
+        c--;
+    }
+    printf("%02d-%d",a,b);
+    return 0;
+}
+
+Output:-
+08-2019                                                                                                                                       
+18                                                                                                                                            
+02-2021
+
+
+
+Python:-
+a,b=map(int,input().split("-"))
+c=int(input())
+while(c>12):
+    b+=1
+    c-=12
+while(c>0):
+    if(a==12):
+        b+=1
+        a=1
+    else:
+        a+=1
+    c-=1
+print("%02d" %a,end="-")
+print(b)

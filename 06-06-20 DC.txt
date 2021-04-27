@@ -1,0 +1,17 @@
+a,b,c=map(int,input().split("-"))
+if(b==1): print("January")
+elif(b==2): print("February")
+elif(b==3): print("March")
+elif(b==4): print("April")
+elif(b==5): print("May")
+elif(b==6): print("June")
+elif(b==7): print("July")
+elif(b==8): print("August")
+elif(b==9): print("September")
+elif(b==10): print("October")
+elif(b==11): print("November")
+else: print("December")
+
+Output:-
+15-06-2001
+June

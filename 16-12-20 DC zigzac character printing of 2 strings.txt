@@ -1,0 +1,16 @@
+a=input().strip()
+b=input().strip()
+for i in range(0,len(a),2):
+    print(a[i],end="")
+    if(i+1<len(b)): print(b[i+1],end="")
+    print(b[i],end="")
+    if(i+1<len(a)): print(a[i+1],end="")
+
+Output:-
+note
+ball
+nabotlle
+
+abc123
+456@xy
+a54bc@612yx3

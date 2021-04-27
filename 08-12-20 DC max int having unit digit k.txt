@@ -1,0 +1,21 @@
+n=int(input())
+a=list(map(int,input().split()))
+k=int(input())
+b,f=[],0
+for i in a:
+    if(i%10==k):
+        f=1
+        b.append(i)
+if(f==1): print(max(b))
+else: print(-1)
+
+Output:-
+6
+592 4215 85 702 217 92
+2
+702
+
+9
+10 69 38 60 37 16 49 8 26
+5
+-1

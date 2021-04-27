@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+char a[1000],tmp;
+int n,i,j;
+printf("Enter:");
+scanf("%d",&n);
+printf("Enter:");
+scanf("%s",&a);
+for(i=0;i<n-1;i++){
+    for(j=i+1;j<n;j++){
+        if(a[i]>a[j]){
+            tmp=a[i];
+            a[i]=a[j];
+            a[j]=tmp;
+        }
+    }
+}
+printf("%s",a);
+}
+
+
+
+
+Output:-
+Enter:6                                                                                                                                       
+Enter:sriram                                                                                                                                  
+aimrrs

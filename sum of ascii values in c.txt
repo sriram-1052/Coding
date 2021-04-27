@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+void main()
+{
+    char s[200];
+    int n,i,sum=0,z;
+    printf("Enter the character:");
+    scanf("%s",&s);
+    n=strlen(s);
+    printf("Length of the character is:%d\n",n);
+    if(2<=n<=100)
+    {
+    for(i=0;i<n;i++)
+    {
+        printf("%c=%d  ",s[i],s[i]);
+        z=s[i];
+        sum+=z;
+    }
+    printf("\n");
+    printf("Sum of given character value is:%d",sum);
+    }
+    getch();
+}
+
+
+Output:
+Enter the character:sriram                                                                                                                    
+Length of the character is:6                                                                                                                  
+s=115  r=114  i=105  r=114  a=97  m=109                                                                                                       
+Sum of given character value is:654

@@ -1,0 +1,149 @@
+#include <stdio.h>
+
+int main()
+{
+    int r,c,i,j;
+    printf("Enter:");
+    scanf("%d %d",&r,&c);
+    char a[r][c];
+    printf("Enter:");
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            scanf(" %c",&a[i][j]);
+        }
+    }
+    int l,m,x,y;
+    r=r*4;
+    c=c*4;
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            if(i%4==0)
+            {
+                printf(" ");
+            }
+            else
+            {
+                if((i%4==1)||(i%4==3))
+                {
+                    if(j%4!=0)
+                    {
+                        printf("*");
+                    }
+                    else
+                    {
+                        printf(" ");
+                    }
+                }
+                else
+                {
+                    if((j%4==1)||(j%4==3))
+                    {
+                        printf("*");
+                    }
+                    else
+                    {
+                        if(j%4==2)
+                        {
+                            printf("s");
+                        }
+                        else
+                        {
+                            printf(" ");
+                        }
+                    }
+                }
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int r,c,i,j;
+    printf("Enter:");
+    scanf("%d %d",&r,&c);
+    char a[100][100];
+    printf("Enter:\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%c ",&a[i][j]);
+        }
+    }
+    int l=c,m=r,x=0,y=0;
+    r=r*4;
+    c=c*4;
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            if(i%4==0)
+            {
+                printf(" ");
+            }
+            else
+            {
+                if((i%4==1)||(i%4==3))
+                {
+                    if(j%4!=0)
+                    {
+                        printf("*");
+                    }
+                    else
+                    {
+                        printf(" ");
+                    }
+                }
+                else
+                {
+                    if((j%4==1)||(j%4==3))
+                    {
+                        printf("*");
+                    }
+                    else
+                    {
+                        if(j%4==2)
+                        {
+                            printf("%c",a[x][y]);
+                            y=y+1;
+                            if(y==l)
+                            {
+                                y=0;
+                                x=x+1;
+                            }
+                        }
+                        else
+                        {
+                            printf(" ");
+                        }
+                    }
+                }
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}

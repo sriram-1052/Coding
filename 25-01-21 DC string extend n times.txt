@@ -1,0 +1,54 @@
+a=input().strip()
+n=int(input())
+d=[]
+for i in range(n):
+    b=input().strip()
+    for j in range(len(b)-1,-1,-1):
+        if(b[:j+1]==a[-(j+1):]):
+            d.append(a+b[j+1:])
+            break
+    else: d.append('-1')
+for i in d: print(i)
+
+Output:-
+skillrack
+5
+king
+racks
+rock
+acknowledge
+skillrack
+
+skillracking
+skillracks
+-1
+skillracknowledge
+skillrack
+
+
+knowledge
+7
+gender
+lodge
+ledger
+edgeless
+edge
+dodge
+edgeedge
+
+knowledgender
+-1
+knowledger
+knowledgeless
+knowledge
+-1
+knowledgeedge
+
+
+Explanation:
+Here S = skillrack.
+The common part between S and the 1st string is k. So the concatenated string is skillracking, which is printed in the 1st line.
+The common part between S and the 2nd string is rack. So the concatenated string is skillracks, which is printed in the 2nd line.
+There is no common part between S and the 3rd string. So -1 is printed in the 3rd line.
+The common part between S and the 4th string is ack. So the concatenated string is skillracknowledge, which is printed in the 4th line.
+The string S and the 5th string are equal. So the string skillrack is printed as it is.

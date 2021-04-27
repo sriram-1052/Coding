@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,a[1001][1001],i,j,s,c[100],d[100],k=0,x,y;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(a[i][j]==0){
+                s=a[i-1][j]+a[i+1][j]+a[i][j-1]+a[i][j+1];
+                a[i][j]=s;
+                c[k]=i;
+                d[k]=j;
+                k++;
+            }
+        }
+    }
+    for(i=0;i<k;i++){
+        x=c[i];
+        y=d[i];
+        a[x-1][y]=0;
+        a[x+1][y]=0;
+        a[x][y-1]=0;
+        a[x][y+1]=0;
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+Output:-
+3
+1 2 3                                                                                                     
+4 0 6                                                                                                     
+7 8 9                                                                                                     
+1 0 3                                                                                                     
+0 20 0                                                                                                    
+7 0 9 

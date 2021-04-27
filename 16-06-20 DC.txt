@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int main()
+{
+    int x,y,a[51],b[51],i,j,k=0,l,n=0,t;
+    scanf("%d",&x);
+    while(x>0){
+        a[k]=x%10;
+        k++;
+        x/=10;
+    }
+    for(i=k-1;i>=0;i--){
+        b[n]=a[i];
+        n++;
+    }
+    for(i=0;i<k;i++){
+        y=k-1;
+        for(j=0;j<n;j++){
+            if(j!=0) printf("-");
+            for(l=0;l<b[j];l++){
+                printf("%d",a[y]);
+            }
+            y--;
+        }
+        t=b[0];
+        for(j=1;j<n;j++){
+            b[j-1]=b[j];
+        }
+        b[n-1]=t;
+        printf("\n");
+    }
+    return 0;
+}
+
+Output:-
+2131                                                                                                                                          
+22-1-333-1                                                                                                                                    
+2-111-3-11                                                                                                                                    
+222-1-33-1                                                                                                                                    
+2-11-3-111 
+
+
+
+Python:-
+x=int(input())
+a=[]
+while(x>0):
+    a.append(x%10)
+    x//=10
+b=a[::-1]
+for i in range(len(a)):
+    y=len(a)-1
+    for j in range(len(b)):
+        if(j!=0): print(end="-")
+        for l in range(b[j]):
+            print(a[y],end="")
+        y-=1
+    t=b[0]
+    for j in range(1,len(b)): 
+        b[j-1]=b[j]
+    b[len(b)-1]=t
+    print()
+
+Output:-
+241                                                                                                                                           
+22-4444-1                                                                                                                                     
+2222-4-11                                                                                                                                     
+2-44-1111

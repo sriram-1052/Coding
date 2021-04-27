@@ -1,0 +1,20 @@
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    d=bin(i)
+    b.append(d.count("1"))
+c=0
+for i in range(len(a)-1):
+    for j in range(i+1,len(a)):
+        if(b[i]==b[j]): c+=1
+print(c)
+
+Output:-
+5
+1 2 3 4 5
+4
+
+8
+15 22 79 70 92 49 35 32
+7

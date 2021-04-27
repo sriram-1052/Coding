@@ -1,0 +1,21 @@
+n=int(input())
+a=list(map(int,input().split()))
+x=int(input())
+s=0
+for i in a:
+    s+=1
+    for j in range(i+1,i+x):
+        if(j not in a): s+=1
+        else: break
+print(s)
+
+Output:-
+4
+1 6 10 11
+2
+7
+
+7
+3 6 7 13 18 21 22
+5
+23

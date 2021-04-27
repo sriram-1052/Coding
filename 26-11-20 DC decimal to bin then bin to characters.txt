@@ -1,0 +1,18 @@
+n=int(input())
+a,b,c,j,k=bin(n),'aeiou','bcdfghjklmnpqrstvwxyz',0,0
+for i in a[2:]:
+    if(i=='0'):
+        print(b[k],end="")
+        if(k==len(b)-1): k=0
+        else: k+=1
+    else:
+        print(c[j],end="")
+        if(j==len(c)-1): j=0
+        else: j+=1
+
+Output:-
+528
+baeiocuaei
+
+50
+bcaedi

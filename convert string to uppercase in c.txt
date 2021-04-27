@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+   char a[100],tmp,b[100];
+   scanf("%s %s",&a,&b);
+   int i,j;
+   int n=strlen(a);
+   int k=strlen(b);
+   for(i=0;i<n-1;i++){
+      for(j=i+1;j<n;j++){
+         a[i]=toupper(a[i]);
+         a[j]=toupper(a[j]);
+         if(a[i]>a[j]){
+            tmp=a[i];
+            a[i]=a[j];
+            a[j]=tmp;
+         }
+      }
+   }
+   for(i=0;i<k-1;i++){
+      for(j=i+1;j<k;j++){
+         b[i]=toupper(b[i]);
+         b[j]=toupper(b[j]);
+         if(b[i]>b[j]){
+            tmp=b[i];
+            b[i]=b[j];
+            b[j]=tmp;
+         }
+      }
+   }
+   printf("%s\n%s",a,b);
+   return 0;
+}
+
+
+
+
+Output:-
+sriRAM                                                                                                                                        
+SRIram                                                                                                                                        
+AIMRRS                                                                                                                                        
+AIMRRS

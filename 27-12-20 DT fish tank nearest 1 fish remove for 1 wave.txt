@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c,i,j,k,x;
+scanf("%d %d",&r,&c);
+int a[r][c];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        scanf("%d",&a[i][j]);
+    }
+}
+scanf("%d",&x);
+int b[x];
+for(i=0;i<x;i++){
+    scanf("%d",&b[i]);
+}
+for(k=0;k<x;k++){
+    for(i=r-1;i>=r-b[k];i--){
+        for(j=0;j<c;j++){
+            if(a[i][j]!=0) a[i][j]--;
+        }
+    }
+}
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        printf("%d ",a[i][j]);
+    }
+    printf("\n");
+}
+}
+
+Output:-
+7 4
+15 16 13 19
+19 13 20 11
+12 13 12 13
+10 14 13 18
+14 18 19 19
+13 19 12 17
+20 14 19 14
+5
+1 3 2 1 6
+
+15 16 13 19
+18 12 19 10
+11 12 11 12
+9 13 12 17
+12 16 17 17
+10 16 9 14
+15 9 14 9
+
+
+3 3
+9 6 6
+5 6 5
+6 5 9
+10
+3 3 3 3 3 3 3 3 3 3
+
+0 0 0
+0 0 0
+0 0 0
+
+
+Explanation:
+Here the number of waves is 5.In the 1st wave, the nearest 1 row is affected. So the last row becomes19 13 18 13In the 2nd wave, the nearest 3 rows are affected. So the last 3 rows become13 17 18 1812 18 11 1618 12 17 12In the 3rd wave, the nearest 2 rows are affected. So the last 2 rows become11 17 10 1517 11 16 11In the 4th wave, the nearest 1 row is affected. So the last row becomes16 10 15 10In the 5th wave, the nearest 6 rows are affected. So the last 6 rows become18 12 19 1011 12 11 129 13 12 1712 16 17 1710 16 9 1415 9 14 9Hence the output is15 16 13 1918 12 19 1011 12 11 129 13 12 1712 16 17 1710 16 9 1415 9 14 9

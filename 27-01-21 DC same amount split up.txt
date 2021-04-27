@@ -1,0 +1,50 @@
+n=int(input())
+a,b=[],[]
+for i in range(n):
+    a.append(list(input().split()))
+    b.append(int(a[i][1]))
+a=sorted(a)
+b=sorted(list(set(b)),reverse=True)
+for i in b:
+    f=0
+    print(i,end=" ")
+    for j in a:
+        if(i==int(j[1]) and f==0):
+            print(j[0],end="")
+            f=1
+        elif(i==int(j[1])):
+            print(",",end=" ")
+            print(j[0],end="")
+    print()
+
+Output:-
+5
+ghi 1500
+def 1200
+abc 1500
+jkl 1500
+mno 1600
+
+1600 mno
+1500 abc, ghi, jkl
+1200 def
+
+
+4
+abcd 950
+Efg 2700
+PQR 950
+mno 950
+
+2700 Efg
+950 PQR, abcd, mno
+
+
+Explanation:
+The purchase amounts in descending order are 1600, 1500 and 1200.
+There is only one customer who has purchased the items for 1600.
+1600 mno
+There are three customers who have purchased the items for 1500.
+1500 abc, ghi, jkl
+There is only one customer who has purchased the items for 1200.
+1200 def

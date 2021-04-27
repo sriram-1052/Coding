@@ -1,0 +1,31 @@
+import re
+a=input("Enter:")
+a=re.findall('\d+',a)
+b=list(map(int,a))
+sum=0
+for i in range(0,len(b)):
+    while(b[i]>0):
+        d=b[i]%10
+        sum=sum+d
+        b[i]//=10
+print(sum)
+
+
+
+Output:-
+Enter:TN-13 AD-9051                                                                                                                           
+19
+
+
+
+
+
+a=input()
+b=[]
+s=0
+for i in range(len(a)):
+    if(a[i].isdigit()):
+        b.append(a[i])
+for i in b:
+    s=s+int(i)
+print(s)
